@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-04T09:10:55Z",
-  "updated": "2026-10-01T13:26:46+03:00",
+  "generated": "2026-11-04T09:32:11Z",
+  "updated": "2026-11-04T11:30:49+02:00",
   "files": 80,
   "codes": 3028,
   "signatures": [
@@ -520,7 +520,7 @@
   "remotes": [
     {
       "path": "codes/ACs/AEG/AEG_ELECTRA_AC.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 40,
       "protocol": "ELECTRA_AC",
       "aliases": [
@@ -547,7 +547,7 @@
     },
     {
       "path": "codes/ACs/Airton/AIRTON.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 40,
       "protocol": "AIRTON",
       "models": [
@@ -557,7 +557,7 @@
     },
     {
       "path": "codes/ACs/Airwell/AIRWELL.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 40,
       "protocol": "AIRWELL",
       "models": [
@@ -568,7 +568,7 @@
     },
     {
       "path": "codes/ACs/Alaska/Alaska_TECO.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 40,
       "protocol": "TECO",
       "models": [
@@ -578,7 +578,7 @@
     },
     {
       "path": "codes/ACs/Amana/Amana_GREE_YAW1F.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 38,
       "protocol": "GREE",
       "aliases": [
@@ -613,7 +613,7 @@
     },
     {
       "path": "codes/ACs/Amana/Amana_GREE_YBOFB.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 38,
       "protocol": "GREE",
       "aliases": [
@@ -648,7 +648,7 @@
     },
     {
       "path": "codes/ACs/Amcor/AMCOR.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 40,
       "protocol": "AMCOR",
       "models": [
@@ -659,7 +659,7 @@
     },
     {
       "path": "codes/ACs/Argo/ARGO_SAC_WREM2.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 40,
       "protocol": "ARGO",
       "models": [
@@ -669,7 +669,7 @@
     },
     {
       "path": "codes/ACs/Argo/ARGO_SAC_WREM3.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 40,
       "protocol": "ARGO",
       "models": [
@@ -679,7 +679,7 @@
     },
     {
       "path": "codes/ACs/Beko/Beko_COOLIX.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 38,
       "protocol": "COOLIX",
       "aliases": [
@@ -695,7 +695,7 @@
     },
     {
       "path": "codes/ACs/Bosch/BOSCH144.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 40,
       "protocol": "BOSCH144",
       "aliases": [
@@ -709,7 +709,7 @@
     },
     {
       "path": "codes/ACs/Carrier/CARRIER_AC64.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 38,
       "protocol": "CARRIER_AC64",
       "aliases": [
@@ -729,7 +729,7 @@
     },
     {
       "path": "codes/ACs/Carrier/Carrier_TOSHIBA_AC_kToshibaGenericRemote_B.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 38,
       "protocol": "TOSHIBA_AC",
       "aliases": [
@@ -754,7 +754,7 @@
     },
     {
       "path": "codes/ACs/Comfee/Comfee_MIDEA.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 38,
       "protocol": "MIDEA",
       "aliases": [
@@ -802,7 +802,7 @@
     },
     {
       "path": "codes/ACs/Corona/CORONA_AC.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 37,
       "protocol": "CORONA_AC",
       "models": [
@@ -815,7 +815,7 @@
     },
     {
       "path": "codes/ACs/Daewoo/Daewoo_TCL112AC_GZ055BE1.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 40,
       "protocol": "TCL112AC",
       "aliases": [
@@ -835,7 +835,7 @@
     },
     {
       "path": "codes/ACs/Daewoo/Daewoo_TCL112AC_TAC09CHSD.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 40,
       "protocol": "TCL112AC",
       "aliases": [
@@ -855,7 +855,7 @@
     },
     {
       "path": "codes/ACs/Daichi/Daichi_HAIER_AC.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 40,
       "protocol": "HAIER_AC",
       "aliases": [
@@ -868,7 +868,7 @@
     },
     {
       "path": "codes/ACs/Daichi/Daichi_HAIER_AC160.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 40,
       "protocol": "HAIER_AC160",
       "aliases": [
@@ -881,7 +881,7 @@
     },
     {
       "path": "codes/ACs/Daichi/Daichi_HAIER_AC176.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 40,
       "protocol": "HAIER_AC176",
       "aliases": [
@@ -897,7 +897,7 @@
     },
     {
       "path": "codes/ACs/Daichi/Daichi_HAIER_AC_YRW02.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 40,
       "protocol": "HAIER_AC_YRW02",
       "aliases": [
@@ -911,7 +911,7 @@
     },
     {
       "path": "codes/ACs/Daikin/DAIKIN.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 40,
       "protocol": "DAIKIN",
       "models": [
@@ -927,7 +927,7 @@
     },
     {
       "path": "codes/ACs/Daikin/DAIKIN128.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 39,
       "protocol": "DAIKIN128",
       "models": [
@@ -941,7 +941,7 @@
     },
     {
       "path": "codes/ACs/Daikin/DAIKIN152.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 38,
       "protocol": "DAIKIN152",
       "models": [
@@ -952,7 +952,7 @@
     },
     {
       "path": "codes/ACs/Daikin/DAIKIN160.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 40,
       "protocol": "DAIKIN160",
       "models": [
@@ -963,7 +963,7 @@
     },
     {
       "path": "codes/ACs/Daikin/DAIKIN176.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 36,
       "protocol": "DAIKIN176",
       "models": [
@@ -976,7 +976,7 @@
     },
     {
       "path": "codes/ACs/Daikin/DAIKIN2.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 38,
       "protocol": "DAIKIN2",
       "models": [
@@ -990,7 +990,7 @@
     },
     {
       "path": "codes/ACs/Daikin/DAIKIN216.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 40,
       "protocol": "DAIKIN216",
       "models": [
@@ -1003,7 +1003,7 @@
     },
     {
       "path": "codes/ACs/Daikin/DAIKIN312.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 38,
       "protocol": "DAIKIN312",
       "models": [
@@ -1015,7 +1015,7 @@
     },
     {
       "path": "codes/ACs/Daikin/DAIKIN64.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 39,
       "protocol": "DAIKIN64",
       "models": [
@@ -1028,7 +1028,7 @@
     },
     {
       "path": "codes/ACs/Delonghi/DELONGHI_AC.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 32,
       "protocol": "DELONGHI_AC",
       "models": [
@@ -1037,7 +1037,7 @@
     },
     {
       "path": "codes/ACs/Duux/Duux_TROTEC.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 33,
       "protocol": "TROTEC",
       "aliases": [
@@ -1050,7 +1050,7 @@
     },
     {
       "path": "codes/ACs/Duux/Duux_TROTEC_3550.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 37,
       "protocol": "TROTEC_3550",
       "aliases": [
@@ -1062,7 +1062,7 @@
     },
     {
       "path": "codes/ACs/EcoClim/ECOCLIM.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 19,
       "protocol": "ECOCLIM",
       "models": [
@@ -1072,7 +1072,7 @@
     },
     {
       "path": "codes/ACs/Eurom/EUROM.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 37,
       "protocol": "EUROM",
       "models": [
@@ -1081,7 +1081,7 @@
     },
     {
       "path": "codes/ACs/Fujitsu/FUJITSU_AC_ARDB1.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 40,
       "protocol": "FUJITSU_AC",
       "aliases": [
@@ -1099,7 +1099,7 @@
     },
     {
       "path": "codes/ACs/Fujitsu/FUJITSU_AC_ARRAH2E.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 40,
       "protocol": "FUJITSU_AC",
       "aliases": [
@@ -1122,7 +1122,7 @@
     },
     {
       "path": "codes/ACs/Fujitsu/FUJITSU_AC_ARREW4E.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 40,
       "protocol": "FUJITSU_AC",
       "aliases": [
@@ -1139,7 +1139,7 @@
     },
     {
       "path": "codes/ACs/General_Electric/General_Electric_LG2_AKB73757604.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 40,
       "protocol": "LG2",
       "aliases": [
@@ -1156,7 +1156,7 @@
     },
     {
       "path": "codes/ACs/General_Electric/General_Electric_LG2_AKB74955603.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 40,
       "protocol": "LG2",
       "aliases": [
@@ -1175,7 +1175,7 @@
     },
     {
       "path": "codes/ACs/General_Electric/General_Electric_LG2_AKB75215403.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 40,
       "protocol": "LG2",
       "aliases": [
@@ -1189,7 +1189,7 @@
     },
     {
       "path": "codes/ACs/General_Electric/General_Electric_LG_GE6711AR2853M.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 40,
       "protocol": "LG",
       "aliases": [
@@ -1202,7 +1202,7 @@
     },
     {
       "path": "codes/ACs/Goodweather/GOODWEATHER.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 40,
       "protocol": "GOODWEATHER",
       "models": [
@@ -1211,7 +1211,7 @@
     },
     {
       "path": "codes/ACs/Gree/Gree_KELVINATOR.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 40,
       "protocol": "KELVINATOR",
       "aliases": [
@@ -1237,7 +1237,7 @@
     },
     {
       "path": "codes/ACs/Hisense/Hisense_KELON.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 17,
       "protocol": "KELON",
       "aliases": [
@@ -1252,7 +1252,7 @@
     },
     {
       "path": "codes/ACs/Hitachi/HITACHI_AC.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 40,
       "protocol": "HITACHI_AC",
       "models": [
@@ -1262,7 +1262,7 @@
     },
     {
       "path": "codes/ACs/Hitachi/HITACHI_AC1.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 37,
       "protocol": "HITACHI_AC1",
       "models": [
@@ -1276,7 +1276,7 @@
     },
     {
       "path": "codes/ACs/Hitachi/HITACHI_AC264.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 39,
       "protocol": "HITACHI_AC264",
       "models": [
@@ -1288,7 +1288,7 @@
     },
     {
       "path": "codes/ACs/Hitachi/HITACHI_AC296.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 39,
       "protocol": "HITACHI_AC296",
       "models": [
@@ -1300,7 +1300,7 @@
     },
     {
       "path": "codes/ACs/Hitachi/HITACHI_AC344.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 39,
       "protocol": "HITACHI_AC344",
       "models": [
@@ -1312,7 +1312,7 @@
     },
     {
       "path": "codes/ACs/Hitachi/HITACHI_AC424.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 39,
       "protocol": "HITACHI_AC424",
       "models": [
@@ -1324,7 +1324,7 @@
     },
     {
       "path": "codes/ACs/Maxell/Maxell_MIRAGE_KKG29AC1.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 39,
       "protocol": "MIRAGE",
       "aliases": [
@@ -1341,7 +1341,7 @@
     },
     {
       "path": "codes/ACs/Maxell/Maxell_MIRAGE_KKG9AC1.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 39,
       "protocol": "MIRAGE",
       "aliases": [
@@ -1358,7 +1358,7 @@
     },
     {
       "path": "codes/ACs/Mitsubishi/MITSUBISHI112.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 37,
       "protocol": "MITSUBISHI112",
       "aliases": [
@@ -1376,7 +1376,7 @@
     },
     {
       "path": "codes/ACs/Mitsubishi/MITSUBISHI136.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 36,
       "protocol": "MITSUBISHI136",
       "aliases": [
@@ -1394,7 +1394,7 @@
     },
     {
       "path": "codes/ACs/Mitsubishi/MITSUBISHI_AC.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 40,
       "protocol": "MITSUBISHI_AC",
       "aliases": [
@@ -1418,7 +1418,7 @@
     },
     {
       "path": "codes/ACs/Mitsubishi_Heavy_Industries/Mitsubishi_Heavy_Industries_MITSUBISHI_HEAVY_152.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 38,
       "protocol": "MITSUBISHI_HEAVY_152",
       "models": [
@@ -1431,7 +1431,7 @@
     },
     {
       "path": "codes/ACs/Mitsubishi_Heavy_Industries/Mitsubishi_Heavy_Industries_MITSUBISHI_HEAVY_88.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 38,
       "protocol": "MITSUBISHI_HEAVY_88",
       "models": [
@@ -1444,7 +1444,7 @@
     },
     {
       "path": "codes/ACs/Neoclima/NEOCLIMA.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 40,
       "protocol": "NEOCLIMA",
       "aliases": [
@@ -1459,7 +1459,7 @@
     },
     {
       "path": "codes/ACs/Panasonic/PANASONIC_AC32.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 40,
       "protocol": "PANASONIC_AC32",
       "models": [
@@ -1470,7 +1470,7 @@
     },
     {
       "path": "codes/ACs/Panasonic/PANASONIC_AC_kPanasonicCkp.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 40,
       "protocol": "PANASONIC_AC",
       "models": [
@@ -1500,7 +1500,7 @@
     },
     {
       "path": "codes/ACs/Panasonic/PANASONIC_AC_kPanasonicDke.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 40,
       "protocol": "PANASONIC_AC",
       "models": [
@@ -1530,7 +1530,7 @@
     },
     {
       "path": "codes/ACs/Panasonic/PANASONIC_AC_kPanasonicJke.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 40,
       "protocol": "PANASONIC_AC",
       "models": [
@@ -1560,7 +1560,7 @@
     },
     {
       "path": "codes/ACs/Panasonic/PANASONIC_AC_kPanasonicLke.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 40,
       "protocol": "PANASONIC_AC",
       "models": [
@@ -1590,7 +1590,7 @@
     },
     {
       "path": "codes/ACs/Panasonic/PANASONIC_AC_kPanasonicNke.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 40,
       "protocol": "PANASONIC_AC",
       "models": [
@@ -1620,7 +1620,7 @@
     },
     {
       "path": "codes/ACs/Panasonic/PANASONIC_AC_kPanasonicRkr.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 40,
       "protocol": "PANASONIC_AC",
       "models": [
@@ -1650,7 +1650,7 @@
     },
     {
       "path": "codes/ACs/Rhoss/RHOSS.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 40,
       "protocol": "RHOSS",
       "models": [
@@ -1659,7 +1659,7 @@
     },
     {
       "path": "codes/ACs/Samsung/SAMSUNG_AC.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 40,
       "protocol": "SAMSUNG_AC",
       "models": [
@@ -1684,7 +1684,7 @@
     },
     {
       "path": "codes/ACs/Sanyo/SANYO_AC.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 39,
       "protocol": "SANYO_AC",
       "models": [
@@ -1700,7 +1700,7 @@
     },
     {
       "path": "codes/ACs/Sanyo/SANYO_AC88.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 39,
       "protocol": "SANYO_AC88",
       "models": [
@@ -1712,7 +1712,7 @@
     },
     {
       "path": "codes/ACs/Sharp/SHARP_AC_A705.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 22,
       "protocol": "SHARP_AC",
       "models": [
@@ -1722,7 +1722,7 @@
     },
     {
       "path": "codes/ACs/Sharp/SHARP_AC_A903.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 22,
       "protocol": "SHARP_AC",
       "models": [
@@ -1737,7 +1737,7 @@
     },
     {
       "path": "codes/ACs/Sharp/SHARP_AC_A907.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 39,
       "protocol": "SHARP_AC",
       "models": [
@@ -1750,7 +1750,7 @@
     },
     {
       "path": "codes/ACs/Technibel/TECHNIBEL_AC.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 37,
       "protocol": "TECHNIBEL_AC",
       "models": [
@@ -1759,7 +1759,7 @@
     },
     {
       "path": "codes/ACs/Transcold/TRANSCOLD.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 35,
       "protocol": "TRANSCOLD",
       "models": [
@@ -1768,7 +1768,7 @@
     },
     {
       "path": "codes/ACs/Truma/TRUMA.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 36,
       "protocol": "TRUMA",
       "models": [
@@ -1778,7 +1778,7 @@
     },
     {
       "path": "codes/ACs/Vestel/VESTEL_AC.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 36,
       "protocol": "VESTEL_AC",
       "models": [
@@ -1787,7 +1787,7 @@
     },
     {
       "path": "codes/ACs/Voltas/VOLTAS_kVoltas122LZF.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 39,
       "protocol": "VOLTAS",
       "models": [
@@ -1796,7 +1796,7 @@
     },
     {
       "path": "codes/ACs/Whirlpool/WHIRLPOOL_AC_DG11J13A.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 36,
       "protocol": "WHIRLPOOL_AC",
       "models": [
@@ -1812,7 +1812,7 @@
     },
     {
       "path": "codes/ACs/Whirlpool/WHIRLPOOL_AC_DG11J191.ir",
-      "updated": "2026-10-01T13:26:46+03:00",
+      "updated": "2026-11-04T11:30:49+02:00",
       "codes": 40,
       "protocol": "WHIRLPOOL_AC",
       "models": [
