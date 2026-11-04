@@ -1,0 +1,3 @@
+# index.json and fingerprints.json are committed: the web interface reads
+# them from raw.githubusercontent.com/.../main. See .github/workflows/build.yml.
+node_modules/

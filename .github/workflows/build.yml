@@ -1,0 +1,86 @@
+# Builds index.json and fingerprints.json and commits them to main, where the
+# web interface reads them (raw.githubusercontent.com/ALLTERCO/shelly-ir-database/main).
+#
+# Nightly, because fingerprints.json also covers the public databases, which
+# change without this repository changing; on every push to main that touches
+# codes/ or the tools; and by hand. A pull request only checks that the index
+# builds.
+#
+# The files are committed only when their content changed: each carries the
+# time it was built (`generated`), which is left out of the comparison, so a
+# night with no new remotes adds nothing to the history.
+
+name: build
+
+on:
+  schedule:
+    - cron: '30 2 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['codes/**', 'tools/**', '.github/workflows/build.yml']
+  pull_request:
+    paths: ['codes/**', 'tools/**']
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # the index dates each remote from its last commit
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npx -y tsx tools/build-index.ts /tmp/index.json
+
+  build:
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npx -y tsx tools/build-index.ts
+      - run: npx -y tsx tools/build-fingerprints.ts
+      - name: Commit when the content changed
+        run: |
+          changed=$(node -e '
+            const { execSync } = require("child_process");
+            const { readFileSync } = require("fs");
+            const strip = text => {
+              const data = JSON.parse(text);
+              delete data.generated;
+              return JSON.stringify(data);
+            };
+            const out = [];
+            for (const file of ["index.json", "fingerprints.json"]) {
+              let before = "";
+              try {
+                before = strip(execSync(`git show HEAD:${file}`, { maxBuffer: 1 << 28 }).toString());
+              } catch {}
+              if (strip(readFileSync(file, "utf8")) !== before) out.push(file);
+            }
+            console.log(out.join(" "));
+          ')
+          if [ -z "$changed" ]; then
+            echo "nothing changed"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add $changed
+          git commit -m "generated: rebuild $changed"
+          git push

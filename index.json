@@ -1,0 +1,1830 @@
+{
+  "generated": "2026-11-04T09:10:55Z",
+  "updated": "2026-10-01T13:26:46+03:00",
+  "files": 80,
+  "codes": 3028,
+  "signatures": [
+    {
+      "protocol": "AIRTON",
+      "mark": 6630,
+      "space": 3350,
+      "bits": 56,
+      "gap": 0,
+      "remotes": 1
+    },
+    {
+      "protocol": "AIRWELL",
+      "mark": 2850,
+      "space": 2850,
+      "bits": 92,
+      "gap": 0,
+      "remotes": 1
+    },
+    {
+      "protocol": "AMCOR",
+      "mark": 8200,
+      "space": 4200,
+      "bits": 64,
+      "gap": 34000,
+      "remotes": 1
+    },
+    {
+      "protocol": "ARGO",
+      "mark": 6400,
+      "space": 3300,
+      "bits": 95,
+      "gap": 0,
+      "remotes": 2
+    },
+    {
+      "protocol": "BOSCH144",
+      "mark": 4366,
+      "space": 4415,
+      "bits": 148,
+      "gap": 0,
+      "remotes": 1
+    },
+    {
+      "protocol": "CARRIER_AC64",
+      "mark": 8940,
+      "space": 4556,
+      "bits": 64,
+      "gap": 0,
+      "remotes": 1
+    },
+    {
+      "protocol": "COOLIX",
+      "mark": 4692,
+      "space": 4416,
+      "bits": 98,
+      "gap": 0,
+      "remotes": 1
+    },
+    {
+      "protocol": "CORONA_AC",
+      "mark": 3500,
+      "space": 1680,
+      "bits": 56,
+      "gap": 11000,
+      "remotes": 1
+    },
+    {
+      "protocol": "DAIKIN",
+      "mark": 428,
+      "space": 428,
+      "bits": 4,
+      "gap": 29000,
+      "remotes": 1
+    },
+    {
+      "protocol": "DAIKIN128",
+      "mark": 9800,
+      "space": 9800,
+      "bits": 0,
+      "gap": 10000,
+      "remotes": 1
+    },
+    {
+      "protocol": "DAIKIN152",
+      "mark": 433,
+      "space": 433,
+      "bits": 4,
+      "gap": 25000,
+      "remotes": 1
+    },
+    {
+      "protocol": "DAIKIN160",
+      "mark": 5000,
+      "space": 2145,
+      "bits": 56,
+      "gap": 30000,
+      "remotes": 1
+    },
+    {
+      "protocol": "DAIKIN176",
+      "mark": 5070,
+      "space": 2140,
+      "bits": 56,
+      "gap": 29000,
+      "remotes": 1
+    },
+    {
+      "protocol": "DAIKIN2",
+      "mark": 10024,
+      "space": 25180,
+      "bits": 161,
+      "gap": 35000,
+      "remotes": 1
+    },
+    {
+      "protocol": "DAIKIN216",
+      "mark": 3440,
+      "space": 1750,
+      "bits": 64,
+      "gap": 30000,
+      "remotes": 1
+    },
+    {
+      "protocol": "DAIKIN312",
+      "mark": 453,
+      "space": 414,
+      "bits": 4,
+      "gap": 25000,
+      "remotes": 1
+    },
+    {
+      "protocol": "DAIKIN64",
+      "mark": 9800,
+      "space": 9800,
+      "bits": 0,
+      "gap": 10000,
+      "remotes": 1
+    },
+    {
+      "protocol": "DELONGHI_AC",
+      "mark": 8984,
+      "space": 4200,
+      "bits": 64,
+      "gap": 0,
+      "remotes": 1
+    },
+    {
+      "protocol": "ECOCLIM",
+      "mark": 5730,
+      "space": 1935,
+      "bits": 170,
+      "gap": 0,
+      "remotes": 1
+    },
+    {
+      "protocol": "ELECTRA_AC",
+      "mark": 9166,
+      "space": 4470,
+      "bits": 104,
+      "gap": 0,
+      "remotes": 1
+    },
+    {
+      "protocol": "EUROM",
+      "mark": 3257,
+      "space": 3187,
+      "bits": 96,
+      "gap": 0,
+      "remotes": 1
+    },
+    {
+      "protocol": "FUJITSU_AC",
+      "mark": 3324,
+      "space": 1574,
+      "bits": 128,
+      "gap": 0,
+      "remotes": 3
+    },
+    {
+      "protocol": "GOODWEATHER",
+      "mark": 6820,
+      "space": 6820,
+      "bits": 97,
+      "gap": 0,
+      "remotes": 1
+    },
+    {
+      "protocol": "GREE",
+      "mark": 9000,
+      "space": 4500,
+      "bits": 35,
+      "gap": 20000,
+      "remotes": 2
+    },
+    {
+      "protocol": "HAIER_AC",
+      "mark": 3000,
+      "space": 3000,
+      "bits": 73,
+      "gap": 0,
+      "remotes": 1
+    },
+    {
+      "protocol": "HAIER_AC160",
+      "mark": 3000,
+      "space": 3000,
+      "bits": 161,
+      "gap": 0,
+      "remotes": 1
+    },
+    {
+      "protocol": "HAIER_AC176",
+      "mark": 3000,
+      "space": 3000,
+      "bits": 177,
+      "gap": 0,
+      "remotes": 1
+    },
+    {
+      "protocol": "HAIER_AC_YRW02",
+      "mark": 3000,
+      "space": 3000,
+      "bits": 113,
+      "gap": 0,
+      "remotes": 1
+    },
+    {
+      "protocol": "HITACHI_AC",
+      "mark": 3300,
+      "space": 1700,
+      "bits": 224,
+      "gap": 0,
+      "remotes": 1
+    },
+    {
+      "protocol": "HITACHI_AC1",
+      "mark": 3400,
+      "space": 3400,
+      "bits": 104,
+      "gap": 0,
+      "remotes": 1
+    },
+    {
+      "protocol": "HITACHI_AC264",
+      "mark": 3300,
+      "space": 1700,
+      "bits": 264,
+      "gap": 0,
+      "remotes": 1
+    },
+    {
+      "protocol": "HITACHI_AC296",
+      "mark": 3300,
+      "space": 1700,
+      "bits": 296,
+      "gap": 0,
+      "remotes": 1
+    },
+    {
+      "protocol": "HITACHI_AC344",
+      "mark": 3300,
+      "space": 1700,
+      "bits": 344,
+      "gap": 0,
+      "remotes": 1
+    },
+    {
+      "protocol": "HITACHI_AC424",
+      "mark": 29784,
+      "space": 49290,
+      "bits": 425,
+      "gap": 0,
+      "remotes": 1
+    },
+    {
+      "protocol": "KELON",
+      "mark": 9000,
+      "space": 4600,
+      "bits": 48,
+      "gap": 0,
+      "remotes": 1
+    },
+    {
+      "protocol": "KELVINATOR",
+      "mark": 9010,
+      "space": 4505,
+      "bits": 35,
+      "gap": 20000,
+      "remotes": 1
+    },
+    {
+      "protocol": "LG",
+      "mark": 8500,
+      "space": 4250,
+      "bits": 28,
+      "gap": 0,
+      "remotes": 1
+    },
+    {
+      "protocol": "LG2",
+      "mark": 3200,
+      "space": 9900,
+      "bits": 28,
+      "gap": 108000,
+      "remotes": 3
+    },
+    {
+      "protocol": "MIDEA",
+      "mark": 4480,
+      "space": 4480,
+      "bits": 98,
+      "gap": 106000,
+      "remotes": 1
+    },
+    {
+      "protocol": "MIRAGE",
+      "mark": 8360,
+      "space": 4248,
+      "bits": 120,
+      "gap": 0,
+      "remotes": 2
+    },
+    {
+      "protocol": "MITSUBISHI112",
+      "mark": 3450,
+      "space": 1696,
+      "bits": 112,
+      "gap": 0,
+      "remotes": 1
+    },
+    {
+      "protocol": "MITSUBISHI136",
+      "mark": 3324,
+      "space": 1474,
+      "bits": 136,
+      "gap": 0,
+      "remotes": 1
+    },
+    {
+      "protocol": "MITSUBISHI_AC",
+      "mark": 3400,
+      "space": 1750,
+      "bits": 144,
+      "gap": 16000,
+      "remotes": 1
+    },
+    {
+      "protocol": "MITSUBISHI_HEAVY_152",
+      "mark": 3140,
+      "space": 1630,
+      "bits": 152,
+      "gap": 0,
+      "remotes": 1
+    },
+    {
+      "protocol": "MITSUBISHI_HEAVY_88",
+      "mark": 3140,
+      "space": 1630,
+      "bits": 88,
+      "gap": 0,
+      "remotes": 1
+    },
+    {
+      "protocol": "NEOCLIMA",
+      "mark": 6112,
+      "space": 7391,
+      "bits": 97,
+      "gap": 0,
+      "remotes": 1
+    },
+    {
+      "protocol": "PANASONIC_AC",
+      "mark": 3456,
+      "space": 1728,
+      "bits": 64,
+      "gap": 10000,
+      "remotes": 6
+    },
+    {
+      "protocol": "PANASONIC_AC32",
+      "mark": 3543,
+      "space": 3450,
+      "bits": 66,
+      "gap": 14000,
+      "remotes": 1
+    },
+    {
+      "protocol": "RHOSS",
+      "mark": 3042,
+      "space": 4248,
+      "bits": 97,
+      "gap": 0,
+      "remotes": 1
+    },
+    {
+      "protocol": "SAMSUNG_AC",
+      "mark": 690,
+      "space": 17844,
+      "bits": 0,
+      "gap": 9000,
+      "remotes": 1
+    },
+    {
+      "protocol": "SANYO_AC",
+      "mark": 8500,
+      "space": 4200,
+      "bits": 72,
+      "gap": 0,
+      "remotes": 1
+    },
+    {
+      "protocol": "SANYO_AC88",
+      "mark": 5400,
+      "space": 2000,
+      "bits": 268,
+      "gap": 0,
+      "remotes": 1
+    },
+    {
+      "protocol": "SHARP_AC",
+      "mark": 3800,
+      "space": 1900,
+      "bits": 104,
+      "gap": 0,
+      "remotes": 3
+    },
+    {
+      "protocol": "TCL112AC",
+      "mark": 3000,
+      "space": 1650,
+      "bits": 112,
+      "gap": 0,
+      "remotes": 2
+    },
+    {
+      "protocol": "TECHNIBEL_AC",
+      "mark": 8836,
+      "space": 4380,
+      "bits": 56,
+      "gap": 0,
+      "remotes": 1
+    },
+    {
+      "protocol": "TECO",
+      "mark": 9000,
+      "space": 4440,
+      "bits": 35,
+      "gap": 0,
+      "remotes": 1
+    },
+    {
+      "protocol": "TOSHIBA_AC",
+      "mark": 4400,
+      "space": 4300,
+      "bits": 262,
+      "gap": 0,
+      "remotes": 1
+    },
+    {
+      "protocol": "TRANSCOLD",
+      "mark": 5944,
+      "space": 7563,
+      "bits": 49,
+      "gap": 0,
+      "remotes": 1
+    },
+    {
+      "protocol": "TROTEC",
+      "mark": 5952,
+      "space": 7364,
+      "bits": 73,
+      "gap": 0,
+      "remotes": 1
+    },
+    {
+      "protocol": "TROTEC_3550",
+      "mark": 12000,
+      "space": 5130,
+      "bits": 72,
+      "gap": 0,
+      "remotes": 1
+    },
+    {
+      "protocol": "TRUMA",
+      "mark": 20200,
+      "space": 1000,
+      "bits": 57,
+      "gap": 0,
+      "remotes": 1
+    },
+    {
+      "protocol": "VESTEL_AC",
+      "mark": 3110,
+      "space": 9066,
+      "bits": 56,
+      "gap": 0,
+      "remotes": 1
+    },
+    {
+      "protocol": "VOLTAS",
+      "mark": 1026,
+      "space": 554,
+      "bits": 79,
+      "gap": 0,
+      "remotes": 1
+    },
+    {
+      "protocol": "WHIRLPOOL_AC",
+      "mark": 8950,
+      "space": 4484,
+      "bits": 170,
+      "gap": 0,
+      "remotes": 2
+    }
+  ],
+  "remotes": [
+    {
+      "path": "codes/ACs/AEG/AEG_ELECTRA_AC.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 40,
+      "protocol": "ELECTRA_AC",
+      "aliases": [
+        "AUX",
+        "Centek",
+        "Electra",
+        "Electrolux",
+        "Frigidaire",
+        "Subtropic"
+      ],
+      "models": [
+        "Chillflex Pro AXP26U338CW A/C",
+        "Classic INV 17 / AXW12DCS A/C",
+        "FGPC102AB1 A/C",
+        "KFR-35GW/BpNFW=3 A/C",
+        "SCT-65Q09 A/C",
+        "SUB-07HN1_18Y A/C",
+        "YKR-H/102E remote",
+        "YKR-H/531E A/C",
+        "YKR-M/003E remote",
+        "YKR-P/002E remote",
+        "YKR-T/011 remote"
+      ]
+    },
+    {
+      "path": "codes/ACs/Airton/AIRTON.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 40,
+      "protocol": "AIRTON",
+      "models": [
+        "RD1A1 remote",
+        "SMVH09B-2A2A3NH ref. 409730 A/C"
+      ]
+    },
+    {
+      "path": "codes/ACs/Airwell/AIRWELL.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 40,
+      "protocol": "AIRWELL",
+      "models": [
+        "DLS 21 DCI R410 AW A/C",
+        "RC04 remote",
+        "RC08W remote"
+      ]
+    },
+    {
+      "path": "codes/ACs/Alaska/Alaska_TECO.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 40,
+      "protocol": "TECO",
+      "models": [
+        "SAC9010QC A/C",
+        "SAC9010QC remote"
+      ]
+    },
+    {
+      "path": "codes/ACs/Amana/Amana_GREE_YAW1F.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 38,
+      "protocol": "GREE",
+      "aliases": [
+        "Cooper & Hunter",
+        "EKOKAI",
+        "Gree",
+        "Green",
+        "RusClimate",
+        "Soleus Air",
+        "Ultimate",
+        "Vailland"
+      ],
+      "models": [
+        "A/C",
+        "CH-S09FTXG A/C",
+        "EACS/I-09HAR_X/N3 A/C",
+        "Heat Pump",
+        "PBC093G00CC A/C",
+        "VAI5-035WNI A/C",
+        "VIR09HP115V1AH A/C",
+        "VIR12HP230V1AH A/C",
+        "YAA1FBF remote",
+        "YACIFB remote",
+        "YAN1F1 remote",
+        "YAW1F remote",
+        "YB1F2 remote",
+        "YB1F2F remote",
+        "YBOFB remote",
+        "YBOFB2 remote",
+        "YX1FF remote"
+      ]
+    },
+    {
+      "path": "codes/ACs/Amana/Amana_GREE_YBOFB.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 38,
+      "protocol": "GREE",
+      "aliases": [
+        "Cooper & Hunter",
+        "EKOKAI",
+        "Gree",
+        "Green",
+        "RusClimate",
+        "Soleus Air",
+        "Ultimate",
+        "Vailland"
+      ],
+      "models": [
+        "A/C",
+        "CH-S09FTXG A/C",
+        "EACS/I-09HAR_X/N3 A/C",
+        "Heat Pump",
+        "PBC093G00CC A/C",
+        "VAI5-035WNI A/C",
+        "VIR09HP115V1AH A/C",
+        "VIR12HP230V1AH A/C",
+        "YAA1FBF remote",
+        "YACIFB remote",
+        "YAN1F1 remote",
+        "YAW1F remote",
+        "YB1F2 remote",
+        "YB1F2F remote",
+        "YBOFB remote",
+        "YBOFB2 remote",
+        "YX1FF remote"
+      ]
+    },
+    {
+      "path": "codes/ACs/Amcor/AMCOR.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 40,
+      "protocol": "AMCOR",
+      "models": [
+        "ADR-853H A/C",
+        "TAC-444 remote",
+        "TAC-495 remote"
+      ]
+    },
+    {
+      "path": "codes/ACs/Argo/ARGO_SAC_WREM2.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 40,
+      "protocol": "ARGO",
+      "models": [
+        "Ulisse 13 DCI Mobile Split A/C WREM2 remote",
+        "Ulisse Eco Mobile Split A/C WREM3 remote"
+      ]
+    },
+    {
+      "path": "codes/ACs/Argo/ARGO_SAC_WREM3.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 40,
+      "protocol": "ARGO",
+      "models": [
+        "Ulisse 13 DCI Mobile Split A/C WREM2 remote",
+        "Ulisse Eco Mobile Split A/C WREM3 remote"
+      ]
+    },
+    {
+      "path": "codes/ACs/Beko/Beko_COOLIX.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 38,
+      "protocol": "COOLIX",
+      "aliases": [
+        "Midea"
+      ],
+      "models": [
+        "BINR 070/071 split-type A/C",
+        "MS12FU-10HRDN1-QRD0GW A/C",
+        "MSABAU-07HRFN1-QRD0GW A/C",
+        "RG52D/BGE Remote",
+        "RG57K7/BGEF Remote"
+      ]
+    },
+    {
+      "path": "codes/ACs/Bosch/BOSCH144.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 40,
+      "protocol": "BOSCH144",
+      "aliases": [
+        "Durastar"
+      ],
+      "models": [
+        "CL3000i-Set 26 E A/C",
+        "RG10ABGEF remote",
+        "RG10R/BGEFU1 remote"
+      ]
+    },
+    {
+      "path": "codes/ACs/Carrier/CARRIER_AC64.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 38,
+      "protocol": "CARRIER_AC64",
+      "aliases": [
+        "Carrier/Surrey"
+      ],
+      "models": [
+        "3021203 RR03-S-Remote",
+        "342WM100CT A/C",
+        "40GKX0E2006 remote",
+        "42QG5A55970 remote",
+        "53NGK009/012 Inverter",
+        "619EGX0090E0 A/C",
+        "619EGX0120E0 A/C",
+        "619EGX0180E0 A/C",
+        "619EGX0220E0 A/C"
+      ]
+    },
+    {
+      "path": "codes/ACs/Carrier/Carrier_TOSHIBA_AC_kToshibaGenericRemote_B.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 38,
+      "protocol": "TOSHIBA_AC",
+      "aliases": [
+        "Toshiba"
+      ],
+      "models": [
+        "42NQV025M2 / 38NYV025M2 A/C",
+        "42NQV035M2 / 38NYV035M2 A/C",
+        "42NQV050M2 / 38NYV050M2 A/C",
+        "42NQV060M2 / 38NYV060M2 A/C",
+        "Akita EVO II",
+        "RAS 18SKP-ES",
+        "RAS-2558V A/C",
+        "RAS-25SKVP2-ND A/C",
+        "RAS-B13N3KV2",
+        "RAS-B13N3KVP-E",
+        "WC-L03SE",
+        "WH-TA01JE remote",
+        "WH-TA04NE",
+        "WH-UB03NJ remote"
+      ]
+    },
+    {
+      "path": "codes/ACs/Comfee/Comfee_MIDEA.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 38,
+      "protocol": "MIDEA",
+      "aliases": [
+        "Danby",
+        "Kaysun",
+        "Keystone",
+        "Lennox",
+        "Midea",
+        "MrCool",
+        "Pioneer System",
+        "Trotec"
+      ],
+      "models": [
+        "Casual CF A/C",
+        "DAC080BGUWDB",
+        "DAC100BGUWDB",
+        "DAC120BGUWDB",
+        "FS40-7AR Stand Fan",
+        "M22A indoor split A/C",
+        "M33A indoor split A/C",
+        "M33B indoor split A/C",
+        "MCFA indoor split A/C",
+        "MCFB indoor split A/C",
+        "MMDA indoor split A/C",
+        "MMDB indoor split A/C",
+        "MPD1-12CRN7 A/C",
+        "MWMA indoor split A/C",
+        "MWMA009S4-3P A/C",
+        "MWMA012S4-3P A/C",
+        "MWMB indoor split A/C",
+        "R09C/BCGE remote",
+        "RG57A6/BGEFU1 remote",
+        "RG57H/BGE remote",
+        "RG57H3/BGCEF-M remote",
+        "RG57H4BGEF remote",
+        "RG66B6/BGEFU1 remote",
+        "RUBO18GMFILCAD A/C",
+        "RYBO12GMFILCAD A/C",
+        "TROTEC PAC 2100 X",
+        "TROTEC PAC 3900 X",
+        "UB018GMFILCFHD A/C",
+        "WS012GMFI22HLD A/C",
+        "WS018GMFI22HLD A/C"
+      ]
+    },
+    {
+      "path": "codes/ACs/Corona/CORONA_AC.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 37,
+      "protocol": "CORONA_AC",
+      "models": [
+        "AR-01 remote",
+        "CSH-N2211 A/C",
+        "CSH-N2511 A/C",
+        "CSH-N2811 A/C",
+        "CSH-N4011 A/C"
+      ]
+    },
+    {
+      "path": "codes/ACs/Daewoo/Daewoo_TCL112AC_GZ055BE1.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 40,
+      "protocol": "TCL112AC",
+      "aliases": [
+        "Electrolux",
+        "Leberg",
+        "TCL",
+        "Teknopoint"
+      ],
+      "models": [
+        "Allegro SSA-09H A/C",
+        "DSB-F0934ELH-V A/C",
+        "EACM CL/N3 series remote",
+        "GYKQ-52E remote",
+        "GYKQ-58 remote",
+        "GZ-055B-E1 remote"
+      ]
+    },
+    {
+      "path": "codes/ACs/Daewoo/Daewoo_TCL112AC_TAC09CHSD.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 40,
+      "protocol": "TCL112AC",
+      "aliases": [
+        "Electrolux",
+        "Leberg",
+        "TCL",
+        "Teknopoint"
+      ],
+      "models": [
+        "DSB-F0934ELH-V A/C",
+        "EACM CL/N3 series remote",
+        "GYKQ-52E remote",
+        "GYKQ-58 remote",
+        "LBS-TOR07 A/C",
+        "TAC-09CHSD/XA31I A/C"
+      ]
+    },
+    {
+      "path": "codes/ACs/Daichi/Daichi_HAIER_AC.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 40,
+      "protocol": "HAIER_AC",
+      "aliases": [
+        "Haier",
+        "Mabe"
+      ],
+      "models": [
+        "HSU07-HEA03 remote"
+      ]
+    },
+    {
+      "path": "codes/ACs/Daichi/Daichi_HAIER_AC160.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 40,
+      "protocol": "HAIER_AC160",
+      "aliases": [
+        "Haier",
+        "Mabe"
+      ],
+      "models": [
+        "KFR-26GW/83@UI-Ge A/C"
+      ]
+    },
+    {
+      "path": "codes/ACs/Daichi/Daichi_HAIER_AC176.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 40,
+      "protocol": "HAIER_AC176",
+      "aliases": [
+        "Haier",
+        "Mabe"
+      ],
+      "models": [
+        "D-H A/C",
+        "MMI18HDBWCA6MI8 A/C",
+        "V12843 HJ200223 remote",
+        "V9014557 M47 8D remote"
+      ]
+    },
+    {
+      "path": "codes/ACs/Daichi/Daichi_HAIER_AC_YRW02.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 40,
+      "protocol": "HAIER_AC_YRW02",
+      "aliases": [
+        "Haier",
+        "Mabe"
+      ],
+      "models": [
+        "HSU-09HMC203 A/C",
+        "YR-W02 remote"
+      ]
+    },
+    {
+      "path": "codes/ACs/Daikin/DAIKIN.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 40,
+      "protocol": "DAIKIN",
+      "models": [
+        "ARC433 remote",
+        "ARC443A5 remote",
+        "ARC466A12 remote",
+        "ARC466A33 remote",
+        "BRC4M150W16 remote",
+        "FTE12HV2S A/C",
+        "FTXM-M A/C",
+        "M Series A/C"
+      ]
+    },
+    {
+      "path": "codes/ACs/Daikin/DAIKIN128.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 39,
+      "protocol": "DAIKIN128",
+      "models": [
+        "17 Series FTXB09AXVJU A/C",
+        "17 Series FTXB12AXVJU A/C",
+        "17 Series FTXB24AXVJU A/C",
+        "BRC4M150W16 remote",
+        "BRC52B63 remote",
+        "FTE12HV2S A/C"
+      ]
+    },
+    {
+      "path": "codes/ACs/Daikin/DAIKIN152.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 38,
+      "protocol": "DAIKIN152",
+      "models": [
+        "ARC480A5 remote",
+        "BRC4M150W16 remote",
+        "FTE12HV2S A/C"
+      ]
+    },
+    {
+      "path": "codes/ACs/Daikin/DAIKIN160.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 40,
+      "protocol": "DAIKIN160",
+      "models": [
+        "ARC423A5 remote",
+        "BRC4M150W16 remote",
+        "FTE12HV2S A/C"
+      ]
+    },
+    {
+      "path": "codes/ACs/Daikin/DAIKIN176.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 36,
+      "protocol": "DAIKIN176",
+      "models": [
+        "BRC4C151 remote",
+        "BRC4C153 remote",
+        "BRC4M150W16 remote",
+        "FFQ35B8V1B A/C",
+        "FTE12HV2S A/C"
+      ]
+    },
+    {
+      "path": "codes/ACs/Daikin/DAIKIN2.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 38,
+      "protocol": "DAIKIN2",
+      "models": [
+        "ARC477A1 remote",
+        "BRC4M150W16 remote",
+        "FTE12HV2S A/C",
+        "FTXZ25NV1B A/C",
+        "FTXZ35NV1B A/C",
+        "FTXZ50NV1B A/C"
+      ]
+    },
+    {
+      "path": "codes/ACs/Daikin/DAIKIN216.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 40,
+      "protocol": "DAIKIN216",
+      "models": [
+        "ARC433B69 remote",
+        "ARC484A4 remote",
+        "BRC4M150W16 remote",
+        "FTE12HV2S A/C",
+        "FTQ60TV16U2 A/C"
+      ]
+    },
+    {
+      "path": "codes/ACs/Daikin/DAIKIN312.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 38,
+      "protocol": "DAIKIN312",
+      "models": [
+        "ARC466A67 remote",
+        "BRC4M150W16 remote",
+        "FTE12HV2S A/C",
+        "FTXM20R5V1B A/C"
+      ]
+    },
+    {
+      "path": "codes/ACs/Daikin/DAIKIN64.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 39,
+      "protocol": "DAIKIN64",
+      "models": [
+        "BRC4M150W16 remote",
+        "DGS01 remote",
+        "FFN-C/FCN-F Series A/C",
+        "FTE12HV2S A/C",
+        "FTWX35AXV1 A/C"
+      ]
+    },
+    {
+      "path": "codes/ACs/Delonghi/DELONGHI_AC.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 32,
+      "protocol": "DELONGHI_AC",
+      "models": [
+        "PAC A95"
+      ]
+    },
+    {
+      "path": "codes/ACs/Duux/Duux_TROTEC.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 33,
+      "protocol": "TROTEC",
+      "aliases": [
+        "Trotec"
+      ],
+      "models": [
+        "Blizzard Smart 10K / DXMA04 A/C",
+        "PAC 3200 A/C"
+      ]
+    },
+    {
+      "path": "codes/ACs/Duux/Duux_TROTEC_3550.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 37,
+      "protocol": "TROTEC_3550",
+      "aliases": [
+        "Trotec"
+      ],
+      "models": [
+        "PAC 3550 Pro A/C"
+      ]
+    },
+    {
+      "path": "codes/ACs/EcoClim/ECOCLIM.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 19,
+      "protocol": "ECOCLIM",
+      "models": [
+        "HYSFR-P348 remote",
+        "ZC200DPO A/C"
+      ]
+    },
+    {
+      "path": "codes/ACs/Eurom/EUROM.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 37,
+      "protocol": "EUROM",
+      "models": [
+        "Polar 16CH"
+      ]
+    },
+    {
+      "path": "codes/ACs/Fujitsu/FUJITSU_AC_ARDB1.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 40,
+      "protocol": "FUJITSU_AC",
+      "aliases": [
+        "Fujitsu General",
+        "OGeneral"
+      ],
+      "models": [
+        "AR-DB1 remote",
+        "AR-DL10 remote",
+        "AR-JW17 remote",
+        "AR-JW19 remote",
+        "AST9RSGCW A/C",
+        "ASU30C1 A/C"
+      ]
+    },
+    {
+      "path": "codes/ACs/Fujitsu/FUJITSU_AC_ARRAH2E.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 40,
+      "protocol": "FUJITSU_AC",
+      "aliases": [
+        "Fujitsu General",
+        "OGeneral"
+      ],
+      "models": [
+        "AGTV14LAC A/C",
+        "AOHG09LLC A/C",
+        "AR-RAC1E remote",
+        "AR-RAE1E remote",
+        "AR-RAH2E remote",
+        "AR-RAH2U remote",
+        "AR-RCE1E remote",
+        "AR-RCL1E remote",
+        "AR-REG1U remote",
+        "ASHG09LLCA A/C",
+        "ASYG30LFCA A/C"
+      ]
+    },
+    {
+      "path": "codes/ACs/Fujitsu/FUJITSU_AC_ARREW4E.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 40,
+      "protocol": "FUJITSU_AC",
+      "aliases": [
+        "Fujitsu General",
+        "OGeneral"
+      ],
+      "models": [
+        "AR-REW1E remote",
+        "AR-REW4E remote",
+        "ASTG09K A/C",
+        "ASTG18K A/C",
+        "ASYG09KETA-B A/C"
+      ]
+    },
+    {
+      "path": "codes/ACs/General_Electric/General_Electric_LG2_AKB73757604.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 40,
+      "protocol": "LG2",
+      "aliases": [
+        "LG"
+      ],
+      "models": [
+        "A4UW30GFA2 A/C",
+        "AKB73757604 remote",
+        "AKB74395308 remote",
+        "AKB75215403 remote",
+        "AMNW24GTPA1 A/C",
+        "S4-W12JA3AA A/C"
+      ]
+    },
+    {
+      "path": "codes/ACs/General_Electric/General_Electric_LG2_AKB74955603.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 40,
+      "protocol": "LG2",
+      "aliases": [
+        "LG"
+      ],
+      "models": [
+        "A4UW30GFA2 A/C",
+        "AKB73315611 remote",
+        "AKB74395308 remote",
+        "AKB74955603 remote",
+        "AKB75215403 remote",
+        "AMNW09GSJA0 A/C",
+        "MS05SQ NW0 A/C",
+        "S4-W12JA3AA A/C"
+      ]
+    },
+    {
+      "path": "codes/ACs/General_Electric/General_Electric_LG2_AKB75215403.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 40,
+      "protocol": "LG2",
+      "aliases": [
+        "LG"
+      ],
+      "models": [
+        "AKB74395308 remote",
+        "AKB75215403 remote",
+        "S4-W12JA3AA A/C"
+      ]
+    },
+    {
+      "path": "codes/ACs/General_Electric/General_Electric_LG_GE6711AR2853M.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 40,
+      "protocol": "LG",
+      "aliases": [
+        "LG"
+      ],
+      "models": [
+        "6711AR2853M Remote",
+        "AG1BH09AW101 A/C"
+      ]
+    },
+    {
+      "path": "codes/ACs/Goodweather/GOODWEATHER.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 40,
+      "protocol": "GOODWEATHER",
+      "models": [
+        "ZH/JT-03 remote"
+      ]
+    },
+    {
+      "path": "codes/ACs/Gree/Gree_KELVINATOR.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 40,
+      "protocol": "KELVINATOR",
+      "aliases": [
+        "Kelvinator",
+        "Sharp"
+      ],
+      "models": [
+        "A5VEY A/C",
+        "KSV26CRC A/C",
+        "KSV26HRC A/C",
+        "KSV35CRC A/C",
+        "KSV35HRC A/C",
+        "KSV53HRC A/C",
+        "KSV62HRC A/C",
+        "KSV70CRC A/C",
+        "KSV70HRC A/C",
+        "KSV80HRC A/C",
+        "YALIF Remote",
+        "YAP0F8 remote",
+        "YAPOF3 remote",
+        "YB1FA remote"
+      ]
+    },
+    {
+      "path": "codes/ACs/Hisense/Hisense_KELON.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 17,
+      "protocol": "KELON",
+      "aliases": [
+        "Kelon"
+      ],
+      "models": [
+        "AST-09UW4RVETG00A A/C",
+        "DG11R2-01 remote",
+        "ON/OFF 9000-12000",
+        "RCH-R0Y3 remote"
+      ]
+    },
+    {
+      "path": "codes/ACs/Hitachi/HITACHI_AC.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 40,
+      "protocol": "HITACHI_AC",
+      "models": [
+        "PC-LH3B",
+        "RAS-35THA6 remote"
+      ]
+    },
+    {
+      "path": "codes/ACs/Hitachi/HITACHI_AC1.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 37,
+      "protocol": "HITACHI_AC1",
+      "models": [
+        "KAZE-312KSDP A/C",
+        "LT0541-HTA remote",
+        "PC-LH3B",
+        "R-LT0541-HTA/Y.K.1.1-1 V2.3 remote",
+        "RAS-35THA6 remote",
+        "Series VI A/C"
+      ]
+    },
+    {
+      "path": "codes/ACs/Hitachi/HITACHI_AC264.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 39,
+      "protocol": "HITACHI_AC264",
+      "models": [
+        "PC-LH3B",
+        "RAK-25NH5 A/C",
+        "RAR-2P2 remote",
+        "RAS-35THA6 remote"
+      ]
+    },
+    {
+      "path": "codes/ACs/Hitachi/HITACHI_AC296.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 39,
+      "protocol": "HITACHI_AC296",
+      "models": [
+        "PC-LH3B",
+        "RAR-3U3 remote",
+        "RAS-35THA6 remote",
+        "RAS-70YHA3 A/C"
+      ]
+    },
+    {
+      "path": "codes/ACs/Hitachi/HITACHI_AC344.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 39,
+      "protocol": "HITACHI_AC344",
+      "models": [
+        "PC-LH3B",
+        "RAS-22NK A/C",
+        "RAS-35THA6 remote",
+        "RF11T1 remote"
+      ]
+    },
+    {
+      "path": "codes/ACs/Hitachi/HITACHI_AC424.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 39,
+      "protocol": "HITACHI_AC424",
+      "models": [
+        "PC-LH3B",
+        "RAR-8P2 remote",
+        "RAS-35THA6 remote",
+        "RAS-AJ25H A/C"
+      ]
+    },
+    {
+      "path": "codes/ACs/Maxell/Maxell_MIRAGE_KKG29AC1.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 39,
+      "protocol": "MIRAGE",
+      "aliases": [
+        "Mirage",
+        "Tronitechnik"
+      ],
+      "models": [
+        "KKG29A-C1 remote",
+        "KKG9A-C1 remote",
+        "MX-CH18CF A/C",
+        "Reykir 9000 A/C",
+        "VLU series A/C"
+      ]
+    },
+    {
+      "path": "codes/ACs/Maxell/Maxell_MIRAGE_KKG9AC1.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 39,
+      "protocol": "MIRAGE",
+      "aliases": [
+        "Mirage",
+        "Tronitechnik"
+      ],
+      "models": [
+        "KKG29A-C1 remote",
+        "KKG9A-C1 remote",
+        "MX-CH18CF A/C",
+        "Reykir 9000 A/C",
+        "VLU series A/C"
+      ]
+    },
+    {
+      "path": "codes/ACs/Mitsubishi/MITSUBISHI112.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 37,
+      "protocol": "MITSUBISHI112",
+      "aliases": [
+        "Mitsubishi Electric"
+      ],
+      "models": [
+        "HC3000 Projector",
+        "KM14A 0179213 remote",
+        "KPOA remote",
+        "MS-GK24VA A/C",
+        "MSH-A24WV A/C",
+        "MUH-A24WV A/C",
+        "TV"
+      ]
+    },
+    {
+      "path": "codes/ACs/Mitsubishi/MITSUBISHI136.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 36,
+      "protocol": "MITSUBISHI136",
+      "aliases": [
+        "Mitsubishi Electric"
+      ],
+      "models": [
+        "001CP T7WE10714 remote",
+        "HC3000 Projector",
+        "KM14A 0179213 remote",
+        "MS-GK24VA A/C",
+        "PAR-FA32MA remote",
+        "PEAD-RP71JAA Ducted A/C",
+        "TV"
+      ]
+    },
+    {
+      "path": "codes/ACs/Mitsubishi/MITSUBISHI_AC.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 40,
+      "protocol": "MITSUBISHI_AC",
+      "aliases": [
+        "Mitsubishi Electric"
+      ],
+      "models": [
+        "HC3000 Projector",
+        "KM14A 0179213 remote",
+        "MLZ-RX5017AS A/C",
+        "MS-GK24VA A/C",
+        "MSZ-FHnnVE A/C",
+        "MSZ-GV2519 A/C",
+        "MSZ-SF25VE3 A/C",
+        "MSZ-ZW4017S A/C",
+        "RH151 remote",
+        "RH151/M21ED6426 remote",
+        "SG153/M21EDF426 remote",
+        "SG15D remote",
+        "TV"
+      ]
+    },
+    {
+      "path": "codes/ACs/Mitsubishi_Heavy_Industries/Mitsubishi_Heavy_Industries_MITSUBISHI_HEAVY_152.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 38,
+      "protocol": "MITSUBISHI_HEAVY_152",
+      "models": [
+        "RKX502A001C remote",
+        "RLA502A700B remote",
+        "SRKxxZJ-S A/C",
+        "SRKxxZM-S A/C",
+        "SRKxxZMXA-S A/C"
+      ]
+    },
+    {
+      "path": "codes/ACs/Mitsubishi_Heavy_Industries/Mitsubishi_Heavy_Industries_MITSUBISHI_HEAVY_88.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 38,
+      "protocol": "MITSUBISHI_HEAVY_88",
+      "models": [
+        "RKX502A001C remote",
+        "RLA502A700B remote",
+        "SRKxxZJ-S A/C",
+        "SRKxxZM-S A/C",
+        "SRKxxZMXA-S A/C"
+      ]
+    },
+    {
+      "path": "codes/ACs/Neoclima/NEOCLIMA.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 40,
+      "protocol": "NEOCLIMA",
+      "aliases": [
+        "Soleus Air"
+      ],
+      "models": [
+        "NS-09AHTI A/C",
+        "TTWM1-10-01 A/C",
+        "ZCF/TL-05 remote",
+        "ZH/TY-01 remote"
+      ]
+    },
+    {
+      "path": "codes/ACs/Panasonic/PANASONIC_AC32.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 40,
+      "protocol": "PANASONIC_AC32",
+      "models": [
+        "A75C2295 remote",
+        "CS-E9CKP series A/C",
+        "TV"
+      ]
+    },
+    {
+      "path": "codes/ACs/Panasonic/PANASONIC_AC_kPanasonicCkp.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 40,
+      "protocol": "PANASONIC_AC",
+      "models": [
+        "A75C2311 remote",
+        "A75C2616-1 remote",
+        "A75C3704 remote",
+        "A75C3747 remote",
+        "A75C4762 remote",
+        "CKP series A/C",
+        "CS-E12QKEW A/C",
+        "CS-E7PKR A/C",
+        "CS-ME10CKPG A/C",
+        "CS-ME12CKPG A/C",
+        "CS-ME14CKPG A/C",
+        "CS-YW9MKD A/C",
+        "CS-Z24RKR A/C",
+        "CS-Z9RKR A/C",
+        "DKE series A/C",
+        "DKW series A/C",
+        "JKE series A/C",
+        "NKE series A/C",
+        "PKR series A/C",
+        "PN1122V remote",
+        "RKR series A/C",
+        "TV"
+      ]
+    },
+    {
+      "path": "codes/ACs/Panasonic/PANASONIC_AC_kPanasonicDke.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 40,
+      "protocol": "PANASONIC_AC",
+      "models": [
+        "A75C2311 remote",
+        "A75C2616-1 remote",
+        "A75C3704 remote",
+        "A75C3747 remote",
+        "A75C4762 remote",
+        "CKP series A/C",
+        "CS-E12QKEW A/C",
+        "CS-E7PKR A/C",
+        "CS-ME10CKPG A/C",
+        "CS-ME12CKPG A/C",
+        "CS-ME14CKPG A/C",
+        "CS-YW9MKD A/C",
+        "CS-Z24RKR A/C",
+        "CS-Z9RKR A/C",
+        "DKE series A/C",
+        "DKW series A/C",
+        "JKE series A/C",
+        "NKE series A/C",
+        "PKR series A/C",
+        "PN1122V remote",
+        "RKR series A/C",
+        "TV"
+      ]
+    },
+    {
+      "path": "codes/ACs/Panasonic/PANASONIC_AC_kPanasonicJke.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 40,
+      "protocol": "PANASONIC_AC",
+      "models": [
+        "A75C2311 remote",
+        "A75C2616-1 remote",
+        "A75C3704 remote",
+        "A75C3747 remote",
+        "A75C4762 remote",
+        "CKP series A/C",
+        "CS-E12QKEW A/C",
+        "CS-E7PKR A/C",
+        "CS-ME10CKPG A/C",
+        "CS-ME12CKPG A/C",
+        "CS-ME14CKPG A/C",
+        "CS-YW9MKD A/C",
+        "CS-Z24RKR A/C",
+        "CS-Z9RKR A/C",
+        "DKE series A/C",
+        "DKW series A/C",
+        "JKE series A/C",
+        "NKE series A/C",
+        "PKR series A/C",
+        "PN1122V remote",
+        "RKR series A/C",
+        "TV"
+      ]
+    },
+    {
+      "path": "codes/ACs/Panasonic/PANASONIC_AC_kPanasonicLke.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 40,
+      "protocol": "PANASONIC_AC",
+      "models": [
+        "A75C2311 remote",
+        "A75C2616-1 remote",
+        "A75C3704 remote",
+        "A75C3747 remote",
+        "A75C4762 remote",
+        "CKP series A/C",
+        "CS-E12QKEW A/C",
+        "CS-E7PKR A/C",
+        "CS-ME10CKPG A/C",
+        "CS-ME12CKPG A/C",
+        "CS-ME14CKPG A/C",
+        "CS-YW9MKD A/C",
+        "CS-Z24RKR A/C",
+        "CS-Z9RKR A/C",
+        "DKE series A/C",
+        "DKW series A/C",
+        "JKE series A/C",
+        "NKE series A/C",
+        "PKR series A/C",
+        "PN1122V remote",
+        "RKR series A/C",
+        "TV"
+      ]
+    },
+    {
+      "path": "codes/ACs/Panasonic/PANASONIC_AC_kPanasonicNke.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 40,
+      "protocol": "PANASONIC_AC",
+      "models": [
+        "A75C2311 remote",
+        "A75C2616-1 remote",
+        "A75C3704 remote",
+        "A75C3747 remote",
+        "A75C4762 remote",
+        "CKP series A/C",
+        "CS-E12QKEW A/C",
+        "CS-E7PKR A/C",
+        "CS-ME10CKPG A/C",
+        "CS-ME12CKPG A/C",
+        "CS-ME14CKPG A/C",
+        "CS-YW9MKD A/C",
+        "CS-Z24RKR A/C",
+        "CS-Z9RKR A/C",
+        "DKE series A/C",
+        "DKW series A/C",
+        "JKE series A/C",
+        "NKE series A/C",
+        "PKR series A/C",
+        "PN1122V remote",
+        "RKR series A/C",
+        "TV"
+      ]
+    },
+    {
+      "path": "codes/ACs/Panasonic/PANASONIC_AC_kPanasonicRkr.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 40,
+      "protocol": "PANASONIC_AC",
+      "models": [
+        "A75C2311 remote",
+        "A75C2616-1 remote",
+        "A75C3704 remote",
+        "A75C3747 remote",
+        "A75C4762 remote",
+        "CKP series A/C",
+        "CS-E12QKEW A/C",
+        "CS-E7PKR A/C",
+        "CS-ME10CKPG A/C",
+        "CS-ME12CKPG A/C",
+        "CS-ME14CKPG A/C",
+        "CS-YW9MKD A/C",
+        "CS-Z24RKR A/C",
+        "CS-Z9RKR A/C",
+        "DKE series A/C",
+        "DKW series A/C",
+        "JKE series A/C",
+        "NKE series A/C",
+        "PKR series A/C",
+        "PN1122V remote",
+        "RKR series A/C",
+        "TV"
+      ]
+    },
+    {
+      "path": "codes/ACs/Rhoss/RHOSS.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 40,
+      "protocol": "RHOSS",
+      "models": [
+        "Idrowall MPCV 20-30-35-40"
+      ]
+    },
+    {
+      "path": "codes/ACs/Samsung/SAMSUNG_AC.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 40,
+      "protocol": "SAMSUNG_AC",
+      "models": [
+        "AH59-02692E Soundbar remote",
+        "AK59-00167A Bluray remote",
+        "AR09FSSDAWKNFA A/C",
+        "AR09HSFSBWKN A/C",
+        "AR12HSSDBWKNEU A/C",
+        "AR12KSFPEWQNET A/C",
+        "AR12NXCXAWKXEU A/C",
+        "AR12TXEAAWKNEU A/C",
+        "BN59-01178B TV remote",
+        "DB63-03556X003 remote",
+        "DB93-14195A remote",
+        "DB93-16761C remote",
+        "DB96-24901C remote",
+        "HW-J551 Soundbar",
+        "IEC-R03 remote",
+        "UA55H6300 TV",
+        "UE40K5510AUXRU TV"
+      ]
+    },
+    {
+      "path": "codes/ACs/Sanyo/SANYO_AC.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 39,
+      "protocol": "SANYO_AC",
+      "models": [
+        "LC7461 transmitter IC",
+        "RCS-2HS4E remote",
+        "RCS-2S4E remote",
+        "RCS-4MHVPIS4EE remote",
+        "SA 8650B - disabled",
+        "SAP-K121AHA A/C",
+        "SAP-K242AH A/C",
+        "SAP-KMRV124EHE A/C"
+      ]
+    },
+    {
+      "path": "codes/ACs/Sanyo/SANYO_AC88.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 39,
+      "protocol": "SANYO_AC88",
+      "models": [
+        "LC7461 transmitter IC",
+        "RCS-4MHVPIS4EE remote",
+        "SA 8650B - disabled",
+        "SAP-KMRV124EHE A/C"
+      ]
+    },
+    {
+      "path": "codes/ACs/Sharp/SHARP_AC_A705.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 22,
+      "protocol": "SHARP_AC",
+      "models": [
+        "CRMC-A705 JBEZ remote",
+        "LC-52D62U TV"
+      ]
+    },
+    {
+      "path": "codes/ACs/Sharp/SHARP_AC_A903.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 22,
+      "protocol": "SHARP_AC",
+      "models": [
+        "AH-A12REVP-1 A/C",
+        "AH-PR13-GL A/C",
+        "AH-XP10NRY A/C",
+        "CRMC-820 JBEZ remote",
+        "CRMC-A863 JBEZ remote",
+        "CRMC-A903JBEZ remote",
+        "LC-52D62U TV"
+      ]
+    },
+    {
+      "path": "codes/ACs/Sharp/SHARP_AC_A907.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 39,
+      "protocol": "SHARP_AC",
+      "models": [
+        "AH-AxSAY A/C",
+        "AY-ZP40KR A/C",
+        "CRMC-A907 JBEZ remote",
+        "CRMC-A950 JBEZ",
+        "LC-52D62U TV"
+      ]
+    },
+    {
+      "path": "codes/ACs/Technibel/TECHNIBEL_AC.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 37,
+      "protocol": "TECHNIBEL_AC",
+      "models": [
+        "IRO PLUS"
+      ]
+    },
+    {
+      "path": "codes/ACs/Transcold/TRANSCOLD.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 35,
+      "protocol": "TRANSCOLD",
+      "models": [
+        "M1-F-NO-6 A/C"
+      ]
+    },
+    {
+      "path": "codes/ACs/Truma/TRUMA.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 36,
+      "protocol": "TRUMA",
+      "models": [
+        "40091-86700 remote",
+        "Aventa A/C"
+      ]
+    },
+    {
+      "path": "codes/ACs/Vestel/VESTEL_AC.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 36,
+      "protocol": "VESTEL_AC",
+      "models": [
+        "BIOX CXP-9 A/C"
+      ]
+    },
+    {
+      "path": "codes/ACs/Voltas/VOLTAS_kVoltas122LZF.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 39,
+      "protocol": "VOLTAS",
+      "models": [
+        "122LZF 4011252 Window A/C"
+      ]
+    },
+    {
+      "path": "codes/ACs/Whirlpool/WHIRLPOOL_AC_DG11J13A.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 36,
+      "protocol": "WHIRLPOOL_AC",
+      "models": [
+        "DG11J1-04 remote",
+        "DG11J1-3A remote",
+        "DG11J1-91 remote",
+        "SPIS409L A/C",
+        "SPIS412L A/C",
+        "SPIW409L A/C",
+        "SPIW412L A/C",
+        "SPIW418L A/C"
+      ]
+    },
+    {
+      "path": "codes/ACs/Whirlpool/WHIRLPOOL_AC_DG11J191.ir",
+      "updated": "2026-10-01T13:26:46+03:00",
+      "codes": 40,
+      "protocol": "WHIRLPOOL_AC",
+      "models": [
+        "DG11J1-04 remote",
+        "DG11J1-3A remote",
+        "DG11J1-91 remote",
+        "SPIS409L A/C",
+        "SPIS412L A/C",
+        "SPIW409L A/C",
+        "SPIW412L A/C",
+        "SPIW418L A/C"
+      ]
+    }
+  ]
+}
