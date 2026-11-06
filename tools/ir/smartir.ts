@@ -11,11 +11,15 @@ type smartir_t = {
   supportedModels?: string[];
   supportedController?: string;
   commandsEncoding?: string;
+  // a climate file's (an air conditioner)
+  operationModes?: unknown;
   commands?: unknown;
 };
 
 function decodeRaw(text: string): ir_signal_t {
+  // ESPHome's files keep each code as a list in a string: "[3341, -1601, …]"
   const values = text
+    .replace(/[[\]]/g, ' ')
     .trim()
     .split(/[\s,]+/)
     .filter(Boolean)
@@ -119,7 +123,9 @@ function walk(
   }
 
   if (typeof node === 'object') {
-    for (const [key, value] of Object.entries(node as Record<string, unknown>)) {
+    for (const [key, value] of Object.entries(
+      node as Record<string, unknown>
+    )) {
       walk(value, [...path, key], decode, records);
     }
   }
@@ -146,11 +152,22 @@ export function parseSmartIr(text: string): ir_parse_result_t {
     format: 'smartir',
     remotes: [
       {
-        name: [data.manufacturer, data.supportedModels?.[0]]
-          .filter(Boolean)
-          .join(' ') || 'SmartIR device',
+        // the brand once: "AUX FREEDOM AUX-09FH", not "AUX AUX FREEDOM…"
+        name:
+          (data.supportedModels?.[0] &&
+          data.manufacturer &&
+          data.supportedModels[0]
+            .toLowerCase()
+            .startsWith(data.manufacturer.toLowerCase())
+            ? data.supportedModels[0]
+            : [data.manufacturer, data.supportedModels?.[0]]
+                .filter(Boolean)
+                .join(' ')) || 'SmartIR device',
         manufacturer: data.manufacturer,
         models: data.supportedModels,
+        // SmartIR's climate files say their modes; its fan and media files
+        // don't
+        type: Array.isArray(data.operationModes) ? 'ac' : undefined,
         records,
         warnings: [],
       },

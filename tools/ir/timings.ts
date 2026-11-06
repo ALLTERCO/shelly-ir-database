@@ -1,5 +1,15 @@
-import { MAX_DURATION_US, TICK_US } from './types';
+import {
+  MAX_TIMINGS,
+  MAX_DURATION_US,
+  SAFE_FRAME_BYTES,
+  TICK_US,
+} from './types';
 import type { ir_skip_reason_t } from './types';
+
+// Worst-case envelope: the transport sends { id, src, method, params }
+// with src = `web-${Date.now()}` (lib/transport/transport.svelte.ts).
+const ENVELOPE_SRC = 'web-0000000000000';
+const ENVELOPE_ID = 999999;
 
 // A space this long can only be an inter-frame gap, never a bit.
 const MIN_FRAME_GAP_US = 8000;
@@ -21,7 +31,7 @@ export function normaliseTimings(timings: number[]): number[] {
     }
 
     const last = merged.length - 1;
-    if (merged.length > 0 && (merged[last] < 0) === (value < 0)) {
+    if (merged.length > 0 && merged[last] < 0 === value < 0) {
       merged[last] += value;
       continue;
     }
@@ -82,9 +92,27 @@ export function firstFrame(timings: number[]): number[] {
   return frames.length > 0 ? frames[0] : timings;
 }
 
-export function checkStoreCode(
+export function estimateStoreCodeBytes(
+  deviceId: number,
   name: string,
-  timings: number[]
+  timings: number[],
+  freq: number
+): number {
+  const frame = {
+    id: ENVELOPE_ID,
+    src: ENVELOPE_SRC,
+    method: 'IRDevice.StoreCode',
+    params: { id: deviceId, name, timings, freq },
+  };
+
+  return new TextEncoder().encode(JSON.stringify(frame)).length;
+}
+
+export function checkStoreCode(
+  deviceId: number,
+  name: string,
+  timings: number[],
+  freq: number
 ): { reason: ir_skip_reason_t; detail: string } | null {
   if (timings.length === 0) {
     return { reason: 'empty', detail: 'decoded to no timings' };
@@ -92,6 +120,21 @@ export function checkStoreCode(
 
   if (name.length === 0) {
     return { reason: 'bad-data', detail: 'has no usable name' };
+  }
+
+  if (timings.length > MAX_TIMINGS) {
+    return {
+      reason: 'too-long',
+      detail: `${timings.length} symbols, device accepts ${MAX_TIMINGS}`,
+    };
+  }
+
+  const bytes = estimateStoreCodeBytes(deviceId, name, timings, freq);
+  if (bytes > SAFE_FRAME_BYTES) {
+    return {
+      reason: 'too-long',
+      detail: `${bytes} bytes, device accepts ${SAFE_FRAME_BYTES}`,
+    };
   }
 
   return null;

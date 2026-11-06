@@ -16,17 +16,20 @@ const ENTITIES: Record<string, string> = {
 };
 
 export function unescapeXml(text: string): string {
-  return text.replace(/&(#x?[0-9a-fA-F]+|[a-z]+);/g, (match, entity: string) => {
-    if (entity[0] === '#') {
-      const code =
-        entity[1] === 'x' || entity[1] === 'X'
-          ? parseInt(entity.slice(2), 16)
-          : parseInt(entity.slice(1), 10);
-      return Number.isFinite(code) ? String.fromCodePoint(code) : match;
-    }
+  return text.replace(
+    /&(#x?[0-9a-fA-F]+|[a-z]+);/g,
+    (match, entity: string) => {
+      if (entity[0] === '#') {
+        const code =
+          entity[1] === 'x' || entity[1] === 'X'
+            ? parseInt(entity.slice(2), 16)
+            : parseInt(entity.slice(1), 10);
+        return Number.isFinite(code) ? String.fromCodePoint(code) : match;
+      }
 
-    return ENTITIES[entity] ?? match;
-  });
+      return ENTITIES[entity] ?? match;
+    }
+  );
 }
 
 function parseAttrs(raw: string): Record<string, string> {

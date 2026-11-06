@@ -242,7 +242,9 @@ export function parseLircConf(text: string): ir_parse_result_t {
         remote.name = parts[1] ?? remote.name;
         break;
       case 'flags':
-        remote.flags = (parts[1] ?? '').split('|').map(f => f.trim().toUpperCase());
+        remote.flags = (parts[1] ?? '')
+          .split('|')
+          .map(f => f.trim().toUpperCase());
         break;
       case 'bits':
         remote.bits = Number(parts[1]) || 0;

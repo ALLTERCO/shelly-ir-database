@@ -67,12 +67,7 @@ export const PULSE_PROTOCOLS: Record<string, pulse_def_t> = {
     periodUs: 110000,
     ditto: [9000, -2250, 560],
     dittoGaps: [41000, 96000],
-    assemble: (a, c) => [
-      a & 0xff,
-      (a >> 8) & 0xff,
-      c & 0xff,
-      (c >> 8) & 0xff,
-    ],
+    assemble: (a, c) => [a & 0xff, (a >> 8) & 0xff, c & 0xff, (c >> 8) & 0xff],
   },
   NEC42: {
     freq: DEFAULT_FREQ,
@@ -223,7 +218,11 @@ function sircBytes(command: number, address: number): number[] {
 
 const MIN_FRAME_GAP_US = 10000;
 
-function encodePulse(def: pulse_def_t, address: number, command: number): ir_signal_t {
+function encodePulse(
+  def: pulse_def_t,
+  address: number,
+  command: number
+): ir_signal_t {
   const bits = bytesToBits(def.assemble(address, command), def.bits);
   const frame: number[] = [];
 
@@ -402,7 +401,10 @@ function encodeManchester(
     frame.push(current ? run : -run);
   }
 
-  return { timings: repeatFrame(frame, def.frames, def.periodUs), freq: def.freq };
+  return {
+    timings: repeatFrame(frame, def.frames, def.periodUs),
+    freq: def.freq,
+  };
 }
 
 export function isProtocolSupported(protocol: string): boolean {

@@ -24,7 +24,9 @@ function parseDurations(text: string | null): number[] {
   return values.every(v => Number.isFinite(v)) ? values : [];
 }
 
-function fromParameters(inner: string): { protocol: string; signal: ReturnType<typeof encodeProtocol> } | null {
+function fromParameters(
+  inner: string
+): { protocol: string; signal: ReturnType<typeof encodeProtocol> } | null {
   let protocolName = '';
   const params: Record<string, number> = {};
 
@@ -48,7 +50,8 @@ function fromParameters(inner: string): { protocol: string; signal: ReturnType<t
     mapped === 'NEC' && params.S !== undefined
       ? (params.D & 0xff) | ((params.S & 0xff) << 8)
       : params.D;
-  const protocol = mapped === 'NEC' && params.S !== undefined ? 'NECext' : mapped;
+  const protocol =
+    mapped === 'NEC' && params.S !== undefined ? 'NECext' : mapped;
 
   return { protocol, signal: encodeProtocol(protocol, address, params.F) };
 }
@@ -78,9 +81,10 @@ export function parseGirr(text: string): ir_parse_result_t {
           }
           freq = Number(raw.attrs.frequency) || DEFAULT_FREQ;
           const intro = parseDurations(firstTagText(raw.inner, 'intro'));
-          timings = intro.length > 0
-            ? intro
-            : parseDurations(firstTagText(raw.inner, 'repeat'));
+          timings =
+            intro.length > 0
+              ? intro
+              : parseDurations(firstTagText(raw.inner, 'repeat'));
         });
 
         if (timings.length > 0) {

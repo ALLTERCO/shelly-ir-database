@@ -31,7 +31,7 @@ function near(value: number, expected: number): boolean {
 // A capture can hold more than the message: remotes send repeats, and some
 // put a short burst in front of the real frame. Each one is tried in turn
 // rather than assuming the first is the one that matters.
-function framesOf(timings: number[]): number[][] {
+export function framesOf(timings: number[]): number[][] {
   const out: number[][] = [];
   let current: number[] = [];
 
@@ -104,9 +104,27 @@ function readPulseBits(def: pulse_def_t, frame: number[]): number[] | null {
       return null;
     }
 
-    if (near(measured, one)) {
+    // A space is also read with its mark, as the bit's period: what a
+    // receiver adds to the mark it takes from the space, so the sum stays (a
+    // remote at 680/470 for NEC's 560/560 comes back near 770/400, out of
+    // the space's own tolerance but not the period's). Either reading will
+    // do; one near both a one and a zero (RCA's periods meet at 30%) is the
+    // nearer one by its period
+    const period = mark + measured;
+    const onePeriod = def.one[0] + def.one[1];
+    const zeroPeriod = def.zero[0] + def.zero[1];
+    const isOne = near(measured, one) || (bySpace && near(period, onePeriod));
+    const isZero =
+      near(measured, zero) || (bySpace && near(period, zeroPeriod));
+
+    if (isOne && isZero) {
+      const [v, o, z] = bySpace
+        ? [period, onePeriod, zeroPeriod]
+        : [measured, one, zero];
+      bits.push(Math.abs(v - o) < Math.abs(v - z) ? 1 : 0);
+    } else if (isOne) {
       bits.push(1);
-    } else if (near(measured, zero)) {
+    } else if (isZero) {
       bits.push(0);
     } else {
       return null;
@@ -266,7 +284,11 @@ function readManchesterBits(
 
     if (first === undefined || second === undefined || first === second) {
       // A trailing space the receiver never saw still leaves the bit readable.
-      if (first !== undefined && second === undefined && bits.length === def.bits - 1) {
+      if (
+        first !== undefined &&
+        second === undefined &&
+        bits.length === def.bits - 1
+      ) {
         bits.push(first === def.risingIsOne ? 0 : 1);
         break;
       }
