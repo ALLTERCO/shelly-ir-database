@@ -5,7 +5,10 @@ const PRONTO_CLOCK_US = 0.241246;
 const FORMAT_LEARNED = 0x0000;
 
 function parseWords(hex: string): number[] {
-  const tokens = hex.trim().split(/[\s,]+/).filter(Boolean);
+  const tokens = hex
+    .trim()
+    .split(/[\s,]+/)
+    .filter(Boolean);
   const words: number[] = [];
 
   for (const token of tokens) {
@@ -32,9 +35,10 @@ export function prontoToTimings(hex: string): ir_signal_t {
     );
   }
 
-  const freq = words[1] > 0
-    ? clampFreq(1000000 / (words[1] * PRONTO_CLOCK_US))
-    : DEFAULT_FREQ;
+  const freq =
+    words[1] > 0
+      ? clampFreq(1000000 / (words[1] * PRONTO_CLOCK_US))
+      : DEFAULT_FREQ;
 
   const introPairs = words[2];
   const repeatPairs = words[3];
@@ -46,9 +50,10 @@ export function prontoToTimings(hex: string): ir_signal_t {
 
   // The device stores only the first frame, so prefer the intro sequence and
   // fall back to the repeat sequence for codes that carry no intro.
-  const take = introPairs > 0
-    ? body.slice(0, 2 * introPairs)
-    : body.slice(0, 2 * repeatPairs);
+  const take =
+    introPairs > 0
+      ? body.slice(0, 2 * introPairs)
+      : body.slice(0, 2 * repeatPairs);
 
   if (take.length === 0) {
     throw new Error('Pronto code carries no bursts');

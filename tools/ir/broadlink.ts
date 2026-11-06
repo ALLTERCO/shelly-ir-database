@@ -41,7 +41,11 @@ export function broadlinkToTimings(b64: string): ir_signal_t {
 
   // The 0x0d 0x05 terminator is counted in the length, and 0x0d is a plausible
   // tick value, so it is trimmed here rather than detected mid-stream.
-  if (end >= 6 && bytes[end - 2] === TERMINATOR[0] && bytes[end - 1] === TERMINATOR[1]) {
+  if (
+    end >= 6 &&
+    bytes[end - 2] === TERMINATOR[0] &&
+    bytes[end - 1] === TERMINATOR[1]
+  ) {
     end -= 2;
   }
   const timings: number[] = [];

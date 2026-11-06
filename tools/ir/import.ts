@@ -17,30 +17,6 @@ import { prontoToTimings } from './pronto';
 import { broadlinkToTimings } from './broadlink';
 import { normaliseTimings } from './timings';
 import { DEFAULT_FREQ } from './types';
-import { irLog, logRecords } from './debug';
-
-function logParsed(result: ir_parse_result_t): ir_parse_result_t {
-  const records = result.remotes.flatMap(remote => remote.records);
-  const skipped = records.filter(record => record.skipReason);
-
-  irLog('parsed', {
-    format: result.format,
-    remotes: result.remotes.length,
-    records: records.length,
-    skipped: skipped.length,
-  });
-
-  if (skipped.length > 0) {
-    console.warn(
-      `[ir] ${skipped.length} of ${records.length} codes cannot be imported`,
-      skipped.map(record => `${record.name}: ${record.skipDetail ?? record.skipReason}`)
-    );
-  }
-
-  logRecords('records', records);
-
-  return result;
-}
 
 export function parseIrSource(
   text: string,
@@ -53,21 +29,19 @@ export function parseIrSource(
     throw new IrParseError('Could not tell what kind of IR file this is');
   }
 
-  irLog('parsing', { format: resolved, fileName, bytes: text.length });
-
   switch (resolved) {
     case 'flipper':
-      return logParsed(parseFlipper(text, fileName));
+      return parseFlipper(text, fileName);
     case 'lirc-xml':
-      return logParsed(parseLircXml(text));
+      return parseLircXml(text);
     case 'lirc-conf':
-      return logParsed(parseLircConf(text));
+      return parseLircConf(text);
     case 'girr':
-      return logParsed(parseGirr(text));
+      return parseGirr(text);
     case 'smartir':
-      return logParsed(parseSmartIr(text));
+      return parseSmartIr(text);
     case 'wigshop':
-      return logParsed(parseWigshop(text));
+      return parseWigshop(text);
     default:
       throw new IrParseError(`Unsupported format "${resolved}"`);
   }
@@ -82,8 +56,10 @@ export function detectSignalFormat(text: string): ir_signal_format_t {
     return 'pronto';
   }
 
-  if (/^[A-Za-z0-9+/]+={0,2}$/.test(trimmed.replace(/\s+/g, ''))
-      && /[A-Za-z+/=]/.test(trimmed)) {
+  if (
+    /^[A-Za-z0-9+/]+={0,2}$/.test(trimmed.replace(/\s+/g, '')) &&
+    /[A-Za-z+/=]/.test(trimmed)
+  ) {
     return 'broadlink';
   }
 
@@ -174,4 +150,49 @@ export function toStoreCodeParams(
     timings: record.timings,
     freq: record.freq,
   };
+}
+
+// A file's code name for people (actions and schedules show it): LIRC's
+// KEY_ goes, underscores are spaces, the first letter is a capital
+// ("KEY_VOLUMEUP" "VOLUMEUP", "vol_up" "Vol up"); else as it is
+export function niceCodeName(raw: string): string {
+  const s = raw
+    .trim()
+    .replace(/^KEY_(?=.)/i, '')
+    .replace(/_+/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+  return s ? s.charAt(0).toUpperCase() + s.slice(1) : raw;
+}
+
+// A remote's name for people from a file's or a catalog's: underscores as
+// spaces, the words that say nothing left out (SmartIR's "Unknown model",
+// Flipper's "TCL_UnknownModel2", "Unknown_brand", "Unkown"), and a note in
+// brackets (SmartIR's "(62–86°F; Home Assistant must use Fahrenheit)",
+// how to set it up there); a brand alone
+// (or nothing) gets the kind of remote after it: "Gree air conditioner"
+const UNKNOWN = /^un?kn?own(model|brand)?\d*$/i;
+export function niceRemoteName(raw: string, kind?: string): string {
+  const words = raw
+    .replace(/\s*\([^)]*\)/g, ' ')
+    .replace(/[_]+/g, ' ')
+    .trim()
+    .split(/\s+/)
+    .filter(Boolean);
+  const kept: string[] = [];
+  for (let i = 0; i < words.length; i++) {
+    const w = words[i];
+    if (UNKNOWN.test(w)) {
+      // "Unknown model 2": its model word and number go with it
+      while (/^(model|brand|\d+)$/i.test(words[i + 1] ?? '')) i++;
+      continue;
+    }
+    kept.push(w);
+  }
+  // a number left alone after them says nothing either
+  const name = kept.filter(w => !/^\d+$/.test(w) || kept.length > 2).join(' ');
+  // nothing left and no kind: a plain word, not "Unknown1"
+  if (!kind || name.split(' ').length > 1) return name || 'Remote';
+  const k = kind === kind.toUpperCase() ? kind : kind.toLowerCase();
+  return name ? `${name} ${k}` : kind;
 }

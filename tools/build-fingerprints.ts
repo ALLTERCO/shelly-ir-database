@@ -3,9 +3,8 @@
 //
 //   npx tsx tools/build-fingerprints.ts [outFile]
 //
-// The parsers and the decoder under tools/ir are a copy of src/lib/ir from the
-// web interface: a catalogue is only as recognisable as the formats we can
-// read, and this has to run here, where the codes are. Keep them in step.
+// The parsers and the decoder under tools/ir read every catalogue's format:
+// a catalogue is only as recognisable as the formats we can read.
 //
 // A remote contributes one of two things. If its codes decode to a protocol,
 // it gets an entry per protocol and address with every command seen on it,
@@ -30,7 +29,7 @@ import {
 import { tmpdir } from 'os';
 import { join, relative, sep } from 'path';
 import { parseIrSource } from './ir/import';
-import { decodeAll } from './ir/decode';
+import { decodeAll, framesOf } from './ir/decode';
 import type { ir_decoded_t } from './ir/decode';
 import type { ir_source_format_t } from './ir/types';
 
@@ -53,8 +52,6 @@ const CATALOGS: catalog_def_t[] = [
   { id: 'wigshop', format: 'wigshop', repo: 'DAB-LABS/WigShop', branch: 'main', root: 'wigs', leaf: /\.wig\.json$/i },
 ];
 
-const FRAME_GAP_US = 8000;
-const MIN_FRAME_SYMBOLS = 5;
 
 // A frame up to this long is a button: its codes are listed. A longer one
 // carries state, so only the bits all its codes share are kept.
@@ -97,8 +94,8 @@ function protocolKey(decoded: ir_decoded_t): string {
 // The bits of a frame after its header, one per mark and space: by the mark
 // when the marks have two lengths (pulse width), else by the space (pulse
 // distance), long against short around the middle of the two. A frame
-// whose pulses barely differ reads all zeroes. Has to stay the same as
-// frameBits in the interface's src/lib/ir/identify.ts.
+// whose pulses barely differ reads all zeroes. A press is read the same
+// way when it is searched for.
 function frameBits(frame: number[]): string {
   const data = frame.slice(2);
   const count = data.length >> 1;
@@ -131,11 +128,13 @@ function frameBits(frame: number[]): string {
   // By the mark whenever the marks have two lengths: in pulse width the
   // space is often the mark's complement, and comparing the two spreads would
   // flip between them with every capture, inverting every bit. Two lengths is
-  // the longest tenth of the marks at twice the short level or more: real
-  // pulse width (1300/400, Sony's 1200/600) has it, jitter does not.
+  // the longest tenth of the marks at 1.5 times the short level or more: real
+  // pulse width (1300/400, Sony's 1200/600, 2000/1000 marks) has it with room
+  // for a capture's jitter, which a line at twice would split a 2:1 code on;
+  // equal marks (NEC's) stay within 1.2.
   const sortedMarks = [...marks].sort((a, b) => a - b);
   const useSpaces =
-    sortedMarks[Math.floor((sortedMarks.length * 9) / 10)] < byMark.low * 2;
+    sortedMarks[Math.floor((sortedMarks.length * 9) / 10)] < byMark.low * 1.5;
   const { low, high } = useSpaces ? bySpace : byMark;
 
   if (high < low * 1.5) {
@@ -160,27 +159,8 @@ function bitsHex(bits: string): string {
 // shapes. A live capture is matched frame by frame instead, which is where
 // the lead-in bursts turn up.
 function shapesOf(timings: number[]): { key: string; bits: string }[] {
-  const frames: number[][] = [];
-  let current: number[] = [];
-
-  for (const value of timings) {
-    if (value < 0 && Math.abs(value) >= FRAME_GAP_US) {
-      if (current.length > MIN_FRAME_SYMBOLS) {
-        frames.push(current);
-      }
-
-      current = [];
-      continue;
-    }
-
-    if (current.length > 0 || value > 0) {
-      current.push(value);
-    }
-  }
-
-  if (current.length > MIN_FRAME_SYMBOLS) {
-    frames.push(current);
-  }
+  // the frames as the interface splits a press (framesOf)
+  const frames = framesOf(timings);
 
   // Rounded, because two captures of one remote never agree exactly.
   return frames.slice(0, 1).map(frame => ({
@@ -228,6 +208,9 @@ function readRemote(catalog: catalog_def_t, text: string, file: string) {
   const protocols = new Map<string, Set<string>>();
   // Per shape, the bits of every code that has it.
   const shapes = new Map<string, Set<string>>();
+  // How many codes have a frame of each length: one value from several codes
+  // is a frame that never changes, not a single code.
+  const lengths = new Map<number, number>();
 
   const parsed = parseIrSource(text, catalog.format, file);
   const first = parsed.remotes[0];
@@ -252,6 +235,10 @@ function readRemote(catalog: catalog_def_t, text: string, file: string) {
 
           bits.add(shape.bits);
           shapes.set(shape.key, bits);
+          lengths.set(
+            shape.bits.length,
+            (lengths.get(shape.bits.length) ?? 0) + 1
+          );
         }
 
         continue;
@@ -267,7 +254,7 @@ function readRemote(catalog: catalog_def_t, text: string, file: string) {
     }
   }
 
-  return { protocols, shapes, name };
+  return { protocols, shapes, lengths, name };
 }
 
 // A generated remote's codes (codes/ACs, from IRremoteESP8266) change only
@@ -294,11 +281,15 @@ function variationBits(file: string): string[] {
 
 // What a shape entry says about its codes: each one when a frame is a button,
 // the bits they all share when it carries state. One code of a long frame
-// says nothing about which of its bits change, so it adds nothing. `settings`
-// are frames of the same remote with other settings: they mark bits as
-// changing, but are not counted or listed.
+// says nothing about which of its bits change: a remote of just that code is
+// held to all of them (it is all it sends); several
+// codes with the same frame (a header frame that opens every code, the
+// state following in the next) fix all of its bits. `total` is how many
+// codes have the frame. `settings` are frames of the same remote with other
+// settings: they mark bits as changing, but are not counted or listed.
 function shapeData(
   codes: Set<string>,
+  total: number,
   settings: string[] = []
 ): Partial<entry_t> {
   const list = [...codes];
@@ -314,8 +305,10 @@ function shapeData(
 
   const same = settings.filter(code => code.length === length);
 
-  if (list.length + same.length < 2) {
-    return {};
+  // one code alone (the remote has just it): its bits are all it sends,
+  // every one of them held
+  if (total + same.length < 2) {
+    return { bits: list[0], count: total };
   }
 
   const all = [...list, ...same];
@@ -327,7 +320,7 @@ function shapeData(
     bits += all.every(code => code[i] === bit) ? bit : '.';
   }
 
-  return { bits, count: list.length };
+  return { bits, count: total };
 }
 
 function main() {
@@ -373,11 +366,13 @@ function main() {
           });
         }
 
-        // The shape is a fallback, so it is only recorded for a remote that
-        // gave us nothing better.
+        // The shape is what a code that decodes to nothing is found by: a
+        // remote with some codes in a protocol and others in none (a TV box
+        // whose few NEC codes decode) is found by either.
         if (found.protocols.size > 0) {
           seen.decoded += 1;
-        } else if (found.shapes.size > 0) {
+        }
+        if (found.shapes.size > 0) {
           seen.shaped += 1;
 
           // Two codes of one remote round to neighbouring keys whenever their
@@ -400,7 +395,11 @@ function main() {
             entries.push({
               path: `${catalog.id}:${path}`,
               key,
-              ...shapeData(byLength.get(length) ?? codes, found.settings),
+              ...shapeData(
+                byLength.get(length) ?? codes,
+                found.lengths.get(length) ?? codes.size,
+                found.settings
+              ),
               ...(found.name ? { name: found.name } : {}),
             });
           }

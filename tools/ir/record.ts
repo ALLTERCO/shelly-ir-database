@@ -1,6 +1,10 @@
 import { clampFreq, DEFAULT_FREQ } from './types';
 import type { ir_record_t, ir_skip_reason_t } from './types';
-import { checkStoreCode, normaliseTimings } from './timings';
+import {
+  checkStoreCode,
+  estimateStoreCodeBytes,
+  normaliseTimings,
+} from './timings';
 
 export type record_input_t = {
   id: string;
@@ -30,6 +34,7 @@ export function buildRecord(input: record_input_t): ir_record_t {
       rawName,
       timings: [],
       freq,
+      bytes: 0,
       group: input.group,
       protocol: input.protocol,
       warnings: input.warnings,
@@ -40,7 +45,7 @@ export function buildRecord(input: record_input_t): ir_record_t {
 
   const timings = normaliseTimings(input.timings ?? []);
 
-  const failure = checkStoreCode(name, timings);
+  const failure = checkStoreCode(200, name, timings, freq);
 
   return {
     id: input.id,
@@ -48,6 +53,7 @@ export function buildRecord(input: record_input_t): ir_record_t {
     rawName,
     timings,
     freq,
+    bytes: estimateStoreCodeBytes(200, name, timings, freq),
     group: input.group,
     protocol: input.protocol,
     warnings: input.warnings,
@@ -60,7 +66,7 @@ export function normaliseCodeName(raw: string): string {
   return raw
     .trim()
     .replace(/^KEY_/, '')
-    // eslint-disable-next-line no-control-regex
+
     .replace(/[\u0000-\u001f]/g, '')
     .replace(/\s+/g, '_');
 }

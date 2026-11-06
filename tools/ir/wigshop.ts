@@ -28,7 +28,11 @@ export function parseWigshop(text: string): ir_parse_result_t {
     throw new IrParseError('Not valid JSON');
   }
 
-  if (!wig || typeof wig.format !== 'string' || !wig.format.startsWith('hair-wig')) {
+  if (
+    !wig ||
+    typeof wig.format !== 'string' ||
+    !wig.format.startsWith('hair-wig')
+  ) {
     throw new IrParseError('Not a WigShop wig');
   }
 
