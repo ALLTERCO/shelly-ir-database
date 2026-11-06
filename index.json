@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-04T09:32:11Z",
-  "updated": "2026-11-04T11:30:49+02:00",
+  "generated": "2026-11-06T13:03:09Z",
+  "updated": "2026-11-06T15:02:37+02:00",
   "files": 80,
   "codes": 3028,
   "signatures": [
@@ -679,7 +679,7 @@
     },
     {
       "path": "codes/ACs/Beko/Beko_COOLIX.ir",
-      "updated": "2026-11-04T11:30:49+02:00",
+      "updated": "2026-11-06T15:02:37+02:00",
       "codes": 38,
       "protocol": "COOLIX",
       "aliases": [
@@ -729,7 +729,7 @@
     },
     {
       "path": "codes/ACs/Carrier/Carrier_TOSHIBA_AC_kToshibaGenericRemote_B.ir",
-      "updated": "2026-11-04T11:30:49+02:00",
+      "updated": "2026-11-06T15:02:37+02:00",
       "codes": 38,
       "protocol": "TOSHIBA_AC",
       "aliases": [
@@ -754,7 +754,7 @@
     },
     {
       "path": "codes/ACs/Comfee/Comfee_MIDEA.ir",
-      "updated": "2026-11-04T11:30:49+02:00",
+      "updated": "2026-11-06T15:02:37+02:00",
       "codes": 38,
       "protocol": "MIDEA",
       "aliases": [
@@ -802,7 +802,7 @@
     },
     {
       "path": "codes/ACs/Corona/CORONA_AC.ir",
-      "updated": "2026-11-04T11:30:49+02:00",
+      "updated": "2026-11-06T15:02:37+02:00",
       "codes": 37,
       "protocol": "CORONA_AC",
       "models": [
@@ -941,7 +941,7 @@
     },
     {
       "path": "codes/ACs/Daikin/DAIKIN152.ir",
-      "updated": "2026-11-04T11:30:49+02:00",
+      "updated": "2026-11-06T15:02:37+02:00",
       "codes": 38,
       "protocol": "DAIKIN152",
       "models": [
@@ -976,7 +976,7 @@
     },
     {
       "path": "codes/ACs/Daikin/DAIKIN2.ir",
-      "updated": "2026-11-04T11:30:49+02:00",
+      "updated": "2026-11-06T15:02:37+02:00",
       "codes": 38,
       "protocol": "DAIKIN2",
       "models": [
@@ -1003,7 +1003,7 @@
     },
     {
       "path": "codes/ACs/Daikin/DAIKIN312.ir",
-      "updated": "2026-11-04T11:30:49+02:00",
+      "updated": "2026-11-06T15:02:37+02:00",
       "codes": 38,
       "protocol": "DAIKIN312",
       "models": [
@@ -1028,7 +1028,7 @@
     },
     {
       "path": "codes/ACs/Delonghi/DELONGHI_AC.ir",
-      "updated": "2026-11-04T11:30:49+02:00",
+      "updated": "2026-11-06T15:02:37+02:00",
       "codes": 32,
       "protocol": "DELONGHI_AC",
       "models": [
@@ -1037,7 +1037,7 @@
     },
     {
       "path": "codes/ACs/Duux/Duux_TROTEC.ir",
-      "updated": "2026-11-04T11:30:49+02:00",
+      "updated": "2026-11-06T15:02:37+02:00",
       "codes": 33,
       "protocol": "TROTEC",
       "aliases": [
@@ -1237,7 +1237,7 @@
     },
     {
       "path": "codes/ACs/Hisense/Hisense_KELON.ir",
-      "updated": "2026-11-04T11:30:49+02:00",
+      "updated": "2026-11-06T15:02:37+02:00",
       "codes": 17,
       "protocol": "KELON",
       "aliases": [
@@ -1376,7 +1376,7 @@
     },
     {
       "path": "codes/ACs/Mitsubishi/MITSUBISHI136.ir",
-      "updated": "2026-11-04T11:30:49+02:00",
+      "updated": "2026-11-06T15:02:37+02:00",
       "codes": 36,
       "protocol": "MITSUBISHI136",
       "aliases": [
@@ -1418,7 +1418,7 @@
     },
     {
       "path": "codes/ACs/Mitsubishi_Heavy_Industries/Mitsubishi_Heavy_Industries_MITSUBISHI_HEAVY_152.ir",
-      "updated": "2026-11-04T11:30:49+02:00",
+      "updated": "2026-11-06T15:02:37+02:00",
       "codes": 38,
       "protocol": "MITSUBISHI_HEAVY_152",
       "models": [
@@ -1431,7 +1431,7 @@
     },
     {
       "path": "codes/ACs/Mitsubishi_Heavy_Industries/Mitsubishi_Heavy_Industries_MITSUBISHI_HEAVY_88.ir",
-      "updated": "2026-11-04T11:30:49+02:00",
+      "updated": "2026-11-06T15:02:37+02:00",
       "codes": 38,
       "protocol": "MITSUBISHI_HEAVY_88",
       "models": [
@@ -1712,7 +1712,7 @@
     },
     {
       "path": "codes/ACs/Sharp/SHARP_AC_A705.ir",
-      "updated": "2026-11-04T11:30:49+02:00",
+      "updated": "2026-11-06T15:02:37+02:00",
       "codes": 22,
       "protocol": "SHARP_AC",
       "models": [
@@ -1722,7 +1722,7 @@
     },
     {
       "path": "codes/ACs/Sharp/SHARP_AC_A903.ir",
-      "updated": "2026-11-04T11:30:49+02:00",
+      "updated": "2026-11-06T15:02:37+02:00",
       "codes": 22,
       "protocol": "SHARP_AC",
       "models": [
@@ -1759,7 +1759,7 @@
     },
     {
       "path": "codes/ACs/Transcold/TRANSCOLD.ir",
-      "updated": "2026-11-04T11:30:49+02:00",
+      "updated": "2026-11-06T15:02:37+02:00",
       "codes": 35,
       "protocol": "TRANSCOLD",
       "models": [
@@ -1778,7 +1778,7 @@
     },
     {
       "path": "codes/ACs/Vestel/VESTEL_AC.ir",
-      "updated": "2026-11-04T11:30:49+02:00",
+      "updated": "2026-11-06T15:02:37+02:00",
       "codes": 36,
       "protocol": "VESTEL_AC",
       "models": [
@@ -1796,7 +1796,7 @@
     },
     {
       "path": "codes/ACs/Whirlpool/WHIRLPOOL_AC_DG11J13A.ir",
-      "updated": "2026-11-04T11:30:49+02:00",
+      "updated": "2026-11-06T15:02:37+02:00",
       "codes": 36,
       "protocol": "WHIRLPOOL_AC",
       "models": [
