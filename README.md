@@ -133,7 +133,6 @@ IRremoteESP8266. See [NOTICE](NOTICE) for each project's license.
 | [flipperdevices/IRDB](https://github.com/flipperdevices/IRDB) | MIT | Flipper `.ir` | The official Flipper database |
 | [LIRC remotes](https://github.com/probonopd/lirc-remotes) | None stated (packaged by distributions as GPL-2.0-or-later) | XML carrying Pronto CCF | Mirror of the [LIRC](https://lirc.sourceforge.net/remotes/) database |
 | [SmartIR](https://github.com/smartHomeHub/SmartIR) | MIT | JSON, Broadlink base64 / Pronto | Home Assistant climate, media player and fan codes |
-| [WigShop](https://github.com/DAB-LABS/WigShop) | CC0-1.0 | JSON carrying Pronto | Curated remote profiles for [HAIR](https://github.com/DAB-LABS/HAIR) |
 
 ### Protocol references
 
