@@ -1,7 +1,9 @@
 // Builds fingerprints.json: every remote in every catalogue, described well
-// enough to recognise one from a button press.
+// enough to recognise one from a button press. It also adds to index.json
+// (built first, by build-index.ts) how many codes each remote of the public
+// catalogues holds, which a search orders them by.
 //
-//   npx tsx tools/build-fingerprints.ts [outFile]
+//   npx tsx tools/build-fingerprints.ts [outFile] [indexFile]
 //
 // The parsers and the decoder under tools/ir read every catalogue's format:
 // a catalogue is only as recognisable as the formats we can read.
@@ -213,6 +215,12 @@ function readRemote(catalog: catalog_def_t, text: string, file: string) {
 
   const parsed = parseIrSource(text, catalog.format, file);
   const first = parsed.remotes[0];
+  // the codes the interface can use (the same parsers skip the others), as
+  // it counts a remote's codes
+  const codes = parsed.remotes.reduce(
+    (n, r) => n + r.records.filter(record => !record.skipReason).length,
+    0
+  );
   const name =
     catalog.id === 'smartir' && first?.manufacturer
       ? [first.manufacturer, (first.models ?? []).join(', ')]
@@ -253,7 +261,7 @@ function readRemote(catalog: catalog_def_t, text: string, file: string) {
     }
   }
 
-  return { protocols, shapes, lengths, name };
+  return { protocols, shapes, lengths, name, codes };
 }
 
 // A generated remote's codes (codes/ACs, from IRremoteESP8266) change only
@@ -324,9 +332,13 @@ function shapeData(
 
 function main() {
   const outFile = process.argv[2] ?? 'fingerprints.json';
+  const indexFile = process.argv[3] ?? 'index.json';
 
   const entries: entry_t[] = [];
   const stats: Record<string, { files: number; decoded: number; shaped: number }> = {};
+  // per public catalogue, each remote's code count by its path there; this
+  // repository's own are in the index already
+  const counts: Record<string, Record<string, number>> = {};
   const temp = mkdtempSync(join(tmpdir(), 'ir-fp-'));
 
   // The parsers warn about every code they cannot import, which is useful in
@@ -341,6 +353,7 @@ function main() {
         : '.';
       const files = walk(join(base, catalog.root), catalog.leaf);
       const seen = { files: files.length, decoded: 0, shaped: 0 };
+      const codes: Record<string, number> = {};
 
       for (const file of files) {
         const path = relative(base, file).split(sep).join('/');
@@ -354,6 +367,10 @@ function main() {
         } catch {
           // A file we cannot read is simply not in the index.
           continue;
+        }
+
+        if (found.codes > 0) {
+          codes[path] = found.codes;
         }
 
         for (const [key, commands] of found.protocols) {
@@ -406,6 +423,9 @@ function main() {
       }
 
       stats[catalog.id] = seen;
+      if (catalog.repo) {
+        counts[catalog.id] = codes;
+      }
       console.log(
         `${catalog.id}: ${seen.decoded} decoded, ${seen.shaped} by shape, of ${seen.files} files`
       );
@@ -430,6 +450,15 @@ function main() {
 
   const remotes = new Set(entries.map(entry => entry.path)).size;
   console.log(`\n${entries.length} entries, ${remotes} remotes -> ${outFile}`);
+
+  const index = JSON.parse(readFileSync(indexFile, 'utf8'));
+  index.catalogs = counts;
+  writeFileSync(indexFile, `${JSON.stringify(index, null, 2)}\n`);
+  const counted = Object.values(counts).reduce(
+    (n, c) => n + Object.keys(c).length,
+    0
+  );
+  console.log(`${counted} code counts -> ${indexFile}`);
 }
 
 main();

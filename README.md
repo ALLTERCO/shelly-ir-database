@@ -97,6 +97,16 @@ It carries two timestamps. `generated` is when the file was built; `updated`
 is when the codes themselves last changed, taken from the last commit touching
 each file. That second one is what says how old the data really is.
 
+`catalogs` holds the code count of every remote in the public databases, by
+database and by its path there, so a search can order them by it too:
+
+```json
+"catalogs": { "flipper": { "TVs/LG/LG_AKB75095307.ir": 42 } }
+```
+
+`tools/build-fingerprints.ts` adds it while it reads those databases, so it
+runs after `tools/build-index.ts`.
+
 ### fingerprints.json
 
 What lets the web interface name a remote from a couple of button presses. For
