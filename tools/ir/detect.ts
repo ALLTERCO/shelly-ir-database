@@ -22,9 +22,6 @@ export function detectFormat(
   }
 
   if (trimmed.startsWith('{')) {
-    if (/"format"\s*:\s*"hair-wig/.test(head)) {
-      return 'wigshop';
-    }
     // anywhere in the file: SmartIR's keys can come after its commands
     if (/"(commandsEncoding|supportedController)"/.test(text)) {
       return 'smartir';

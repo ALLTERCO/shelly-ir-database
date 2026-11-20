@@ -12,7 +12,6 @@ import { parseGirr } from './girr';
 import { parseLircConf } from './lirc-conf';
 import { parseLircXml } from './lirc-xml';
 import { parseSmartIr } from './smartir';
-import { parseWigshop } from './wigshop';
 import { prontoToTimings } from './pronto';
 import { broadlinkToTimings } from './broadlink';
 import { normaliseTimings } from './timings';
@@ -40,8 +39,6 @@ export function parseIrSource(
       return parseGirr(text);
     case 'smartir':
       return parseSmartIr(text);
-    case 'wigshop':
-      return parseWigshop(text);
     default:
       throw new IrParseError(`Unsupported format "${resolved}"`);
   }

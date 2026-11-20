@@ -49,7 +49,6 @@ const CATALOGS: catalog_def_t[] = [
   { id: 'shelly', format: 'flipper', root: 'codes', leaf: /\.ir$/i },
   { id: 'lirc', format: 'lirc-xml', repo: 'probonopd/lirc-remotes', branch: 'xml', root: '', leaf: /\.xml$/i },
   { id: 'smartir', format: 'smartir', repo: 'smartHomeHub/SmartIR', branch: 'master', root: 'codes', leaf: /\.json$/i },
-  { id: 'wigshop', format: 'wigshop', repo: 'DAB-LABS/WigShop', branch: 'main', root: 'wigs', leaf: /\.wig\.json$/i },
 ];
 
 

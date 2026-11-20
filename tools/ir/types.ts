@@ -23,7 +23,7 @@ export const TICK_US = 10;
 export const MAX_DURATION_US = 0x7fff * TICK_US;
 
 export type ir_source_format_t =
-  'flipper' | 'lirc-conf' | 'lirc-xml' | 'girr' | 'smartir' | 'wigshop';
+  'flipper' | 'lirc-conf' | 'lirc-xml' | 'girr' | 'smartir';
 
 export type ir_signal_format_t = 'raw' | 'pronto' | 'broadlink';
 

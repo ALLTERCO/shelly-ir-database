@@ -19,9 +19,6 @@ path, name, protocol, address, commands and frame bits):
 - SmartIR, https://github.com/smartHomeHub/SmartIR
   MIT License, Copyright (c) 2019 Vassilis Panos
 
-- WigShop, https://github.com/DAB-LABS/WigShop
-  CC0-1.0
-
 - LIRC remotes, https://github.com/probonopd/lirc-remotes
   (mirror of https://sourceforge.net/p/lirc-remotes)
   No license is stated by the project or its mirror. Linux distributions
